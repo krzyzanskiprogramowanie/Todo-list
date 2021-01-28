@@ -30,14 +30,13 @@ namespace Todo_List
         private void InitializeComponent()
         {
             this.monthCalendar_TodoList = new System.Windows.Forms.MonthCalendar();
-            this.checkedListBox_ToDo = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox_doing = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox_done = new System.Windows.Forms.CheckedListBox();
             this.label_ToDo = new System.Windows.Forms.Label();
             this.label_doing = new System.Windows.Forms.Label();
             this.label_done = new System.Windows.Forms.Label();
             this.panel1_editTask = new System.Windows.Forms.Panel();
             this.button1_test = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // monthCalendar_TodoList
@@ -50,43 +49,6 @@ namespace Todo_List
             this.monthCalendar_TodoList.Name = "monthCalendar_TodoList";
             this.monthCalendar_TodoList.TabIndex = 0;
             this.monthCalendar_TodoList.TitleBackColor = System.Drawing.Color.DimGray;
-            // 
-            // checkedListBox_ToDo
-            // 
-            this.checkedListBox_ToDo.AllowDrop = true;
-            this.checkedListBox_ToDo.FormattingEnabled = true;
-            this.checkedListBox_ToDo.Location = new System.Drawing.Point(348, 62);
-            this.checkedListBox_ToDo.Name = "checkedListBox_ToDo";
-            this.checkedListBox_ToDo.Size = new System.Drawing.Size(254, 356);
-            this.checkedListBox_ToDo.TabIndex = 1;
-            this.checkedListBox_ToDo.UseTabStops = false;
-            this.checkedListBox_ToDo.DragDrop += new System.Windows.Forms.DragEventHandler(this.checkedListBox_ToDo_DragDrop);
-            this.checkedListBox_ToDo.DragEnter += new System.Windows.Forms.DragEventHandler(this.checkedListBox_ToDo_DragEnter);
-            this.checkedListBox_ToDo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.checkedListBox_ToDo_MouseDown);
-            // 
-            // checkedListBox_doing
-            // 
-            this.checkedListBox_doing.AllowDrop = true;
-            this.checkedListBox_doing.FormattingEnabled = true;
-            this.checkedListBox_doing.Location = new System.Drawing.Point(650, 62);
-            this.checkedListBox_doing.Name = "checkedListBox_doing";
-            this.checkedListBox_doing.Size = new System.Drawing.Size(254, 356);
-            this.checkedListBox_doing.TabIndex = 2;
-            this.checkedListBox_doing.DragDrop += new System.Windows.Forms.DragEventHandler(this.checkedListBox_doing_DragDrop);
-            this.checkedListBox_doing.DragEnter += new System.Windows.Forms.DragEventHandler(this.checkedListBox_doing_DragEnter);
-            this.checkedListBox_doing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.checkedListBox_doing_MouseDown);
-            // 
-            // checkedListBox_done
-            // 
-            this.checkedListBox_done.AllowDrop = true;
-            this.checkedListBox_done.FormattingEnabled = true;
-            this.checkedListBox_done.Location = new System.Drawing.Point(976, 62);
-            this.checkedListBox_done.Name = "checkedListBox_done";
-            this.checkedListBox_done.Size = new System.Drawing.Size(254, 356);
-            this.checkedListBox_done.TabIndex = 3;
-            this.checkedListBox_done.DragDrop += new System.Windows.Forms.DragEventHandler(this.checkedListBox_done_DragDrop);
-            this.checkedListBox_done.DragEnter += new System.Windows.Forms.DragEventHandler(this.checkedListBox_done_DragEnter);
-            this.checkedListBox_done.MouseDown += new System.Windows.Forms.MouseEventHandler(this.checkedListBox_done_MouseDown);
             // 
             // label_ToDo
             // 
@@ -133,6 +95,34 @@ namespace Todo_List
             this.button1_test.UseVisualStyleBackColor = true;
             this.button1_test.Click += new System.EventHandler(this.button1_test_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.AllowDrop = true;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(337, 74);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(289, 344);
+            this.listBox1.TabIndex = 9;
+            this.listBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseClick);
+            this.listBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox1_DragDrop);
+            this.listBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox1_DragEnter);
+            this.listBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDown);
+            // 
+            // listBox2
+            // 
+            this.listBox2.AllowDrop = true;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(663, 69);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(254, 364);
+            this.listBox2.TabIndex = 10;
+            this.listBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listBox2_MouseClick);
+            this.listBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox2_DragDrop);
+            this.listBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox2_DragEnter);
+            this.listBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox2_MouseDown);
+            // 
             // TodoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -140,14 +130,13 @@ namespace Todo_List
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1274, 623);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1_test);
             this.Controls.Add(this.panel1_editTask);
             this.Controls.Add(this.label_done);
             this.Controls.Add(this.label_doing);
             this.Controls.Add(this.label_ToDo);
-            this.Controls.Add(this.checkedListBox_done);
-            this.Controls.Add(this.checkedListBox_doing);
-            this.Controls.Add(this.checkedListBox_ToDo);
             this.Controls.Add(this.monthCalendar_TodoList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TodoList";
@@ -161,9 +150,6 @@ namespace Todo_List
         #endregion
 
         private System.Windows.Forms.MonthCalendar monthCalendar_TodoList;
-        private System.Windows.Forms.CheckedListBox checkedListBox_ToDo;
-        private System.Windows.Forms.CheckedListBox checkedListBox_doing;
-        private System.Windows.Forms.CheckedListBox checkedListBox_done;
         private System.Windows.Forms.Label label1_ToDo;
         private System.Windows.Forms.Label label1_doing;
         private System.Windows.Forms.Label label_done;
@@ -171,5 +157,7 @@ namespace Todo_List
         private System.Windows.Forms.Label label_ToDo;
         private System.Windows.Forms.Panel panel1_editTask;
         private System.Windows.Forms.Button button1_test;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
