@@ -24,3 +24,4 @@ C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.TodoList.resources
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Home.af.resources
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Home.pl.resources
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.EditTask.resources

@@ -7,6 +7,9 @@
     <Compile Update="AllTasks.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EditTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Home.cs">
       <SubType>Form</SubType>
     </Compile>

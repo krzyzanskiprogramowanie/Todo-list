@@ -36,6 +36,8 @@ namespace Todo_List
             this.label_ToDo = new System.Windows.Forms.Label();
             this.label_doing = new System.Windows.Forms.Label();
             this.label_done = new System.Windows.Forms.Label();
+            this.panel1_editTask = new System.Windows.Forms.Panel();
+            this.button1_test = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // monthCalendar_TodoList
@@ -113,6 +115,24 @@ namespace Todo_List
             this.label_done.TabIndex = 6;
             this.label_done.Text = "Zrobione";
             // 
+            // panel1_editTask
+            // 
+            this.panel1_editTask.AutoScroll = true;
+            this.panel1_editTask.Location = new System.Drawing.Point(348, 439);
+            this.panel1_editTask.Name = "panel1_editTask";
+            this.panel1_editTask.Size = new System.Drawing.Size(882, 172);
+            this.panel1_editTask.TabIndex = 7;
+            // 
+            // button1_test
+            // 
+            this.button1_test.Location = new System.Drawing.Point(179, 581);
+            this.button1_test.Name = "button1_test";
+            this.button1_test.Size = new System.Drawing.Size(94, 29);
+            this.button1_test.TabIndex = 8;
+            this.button1_test.Text = "button1";
+            this.button1_test.UseVisualStyleBackColor = true;
+            this.button1_test.Click += new System.EventHandler(this.button1_test_Click);
+            // 
             // TodoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -120,6 +140,8 @@ namespace Todo_List
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1274, 623);
+            this.Controls.Add(this.button1_test);
+            this.Controls.Add(this.panel1_editTask);
             this.Controls.Add(this.label_done);
             this.Controls.Add(this.label_doing);
             this.Controls.Add(this.label_ToDo);
@@ -147,5 +169,7 @@ namespace Todo_List
         private System.Windows.Forms.Label label_done;
         private System.Windows.Forms.Label label_doing;
         private System.Windows.Forms.Label label_ToDo;
+        private System.Windows.Forms.Panel panel1_editTask;
+        private System.Windows.Forms.Button button1_test;
     }
 }
