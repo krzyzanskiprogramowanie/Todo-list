@@ -1,0 +1,26 @@
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.exe
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.deps.json
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.runtimeconfig.json
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.runtimeconfig.dev.json
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.dll
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.pdb
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\af\Todo List.resources.dll
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\pl\Todo List.resources.dll
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.csprojAssemblyReference.cache
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.csproj.GenerateResource.cache
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.AssemblyInfoInputs.cache
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.AssemblyInfo.cs
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.csproj.CoreCompileInputs.cache
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\af\Todo List.resources.dll
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\pl\Todo List.resources.dll
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.dll
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.pdb
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.genruntimeconfig.cache
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Properties.Resources.resources
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.AddTasks.resources
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.AllTasks.resources
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Home.resources
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Reminders.resources
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.TodoList.resources
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Home.af.resources
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Home.pl.resources
