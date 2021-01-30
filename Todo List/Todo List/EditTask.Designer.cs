@@ -31,14 +31,14 @@ namespace Todo_List
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditTask));
             this.label1_editTaskName = new System.Windows.Forms.Label();
-            this.richTextBox1_editTaskName = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_editTaskName = new System.Windows.Forms.RichTextBox();
             this.label1_editTaskDescription = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
-            this.button1_deleteTask = new System.Windows.Forms.Button();
-            this.button2_editTask = new System.Windows.Forms.Button();
-            this.button3_updateChanges = new System.Windows.Forms.Button();
+            this.richTextBox_descriptionTask = new System.Windows.Forms.RichTextBox();
+            this.monthCalendar_endTask = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendar_startTask = new System.Windows.Forms.MonthCalendar();
+            this.button_deleteTask = new System.Windows.Forms.Button();
+            this.button_editTask = new System.Windows.Forms.Button();
+            this.button_updateChanges = new System.Windows.Forms.Button();
             this.label1_dataStartTask = new System.Windows.Forms.Label();
             this.label1_whenEndingTask = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -52,13 +52,13 @@ namespace Todo_List
             this.label1_editTaskName.TabIndex = 0;
             this.label1_editTaskName.Text = "Nazwa Zadania:";
             // 
-            // richTextBox1_editTaskName
+            // richTextBox_editTaskName
             // 
-            this.richTextBox1_editTaskName.Location = new System.Drawing.Point(2, 32);
-            this.richTextBox1_editTaskName.Name = "richTextBox1_editTaskName";
-            this.richTextBox1_editTaskName.Size = new System.Drawing.Size(168, 121);
-            this.richTextBox1_editTaskName.TabIndex = 1;
-            this.richTextBox1_editTaskName.Text = "";
+            this.richTextBox_editTaskName.Location = new System.Drawing.Point(2, 32);
+            this.richTextBox_editTaskName.Name = "richTextBox_editTaskName";
+            this.richTextBox_editTaskName.Size = new System.Drawing.Size(168, 121);
+            this.richTextBox_editTaskName.TabIndex = 1;
+            this.richTextBox_editTaskName.Text = "";
             // 
             // label1_editTaskDescription
             // 
@@ -69,60 +69,61 @@ namespace Todo_List
             this.label1_editTaskDescription.TabIndex = 2;
             this.label1_editTaskDescription.Text = "Opis Zadania:";
             // 
-            // richTextBox1
+            // richTextBox_descriptionTask
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(191, 32);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(487, 121);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.richTextBox_descriptionTask.Location = new System.Drawing.Point(191, 32);
+            this.richTextBox_descriptionTask.Name = "richTextBox_descriptionTask";
+            this.richTextBox_descriptionTask.Size = new System.Drawing.Size(487, 121);
+            this.richTextBox_descriptionTask.TabIndex = 3;
+            this.richTextBox_descriptionTask.Text = "";
             // 
-            // monthCalendar1
+            // monthCalendar_endTask
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(353, 225);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 4;
-            this.monthCalendar1.TitleBackColor = System.Drawing.Color.DimGray;
+            this.monthCalendar_endTask.Location = new System.Drawing.Point(353, 225);
+            this.monthCalendar_endTask.Name = "monthCalendar_endTask";
+            this.monthCalendar_endTask.TabIndex = 4;
+            this.monthCalendar_endTask.TitleBackColor = System.Drawing.Color.DimGray;
             // 
-            // monthCalendar2
+            // monthCalendar_startTask
             // 
-            this.monthCalendar2.Location = new System.Drawing.Point(2, 225);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 5;
-            this.monthCalendar2.TitleBackColor = System.Drawing.Color.DimGray;
+            this.monthCalendar_startTask.Location = new System.Drawing.Point(2, 225);
+            this.monthCalendar_startTask.Name = "monthCalendar_startTask";
+            this.monthCalendar_startTask.TabIndex = 5;
+            this.monthCalendar_startTask.TitleBackColor = System.Drawing.Color.DimGray;
             // 
-            // button1_deleteTask
+            // button_deleteTask
             // 
-            this.button1_deleteTask.Image = ((System.Drawing.Image)(resources.GetObject("button1_deleteTask.Image")));
-            this.button1_deleteTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1_deleteTask.Location = new System.Drawing.Point(694, 32);
-            this.button1_deleteTask.Name = "button1_deleteTask";
-            this.button1_deleteTask.Size = new System.Drawing.Size(94, 29);
-            this.button1_deleteTask.TabIndex = 6;
-            this.button1_deleteTask.Text = "Usuń";
-            this.button1_deleteTask.UseVisualStyleBackColor = true;
+            this.button_deleteTask.Image = ((System.Drawing.Image)(resources.GetObject("button_deleteTask.Image")));
+            this.button_deleteTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_deleteTask.Location = new System.Drawing.Point(694, 32);
+            this.button_deleteTask.Name = "button_deleteTask";
+            this.button_deleteTask.Size = new System.Drawing.Size(94, 29);
+            this.button_deleteTask.TabIndex = 6;
+            this.button_deleteTask.Text = "Usuń";
+            this.button_deleteTask.UseVisualStyleBackColor = true;
             // 
-            // button2_editTask
+            // button_editTask
             // 
-            this.button2_editTask.Image = ((System.Drawing.Image)(resources.GetObject("button2_editTask.Image")));
-            this.button2_editTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2_editTask.Location = new System.Drawing.Point(694, 98);
-            this.button2_editTask.Name = "button2_editTask";
-            this.button2_editTask.Size = new System.Drawing.Size(94, 29);
-            this.button2_editTask.TabIndex = 7;
-            this.button2_editTask.Text = " Edytuj";
-            this.button2_editTask.UseVisualStyleBackColor = true;
+            this.button_editTask.Image = ((System.Drawing.Image)(resources.GetObject("button_editTask.Image")));
+            this.button_editTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_editTask.Location = new System.Drawing.Point(694, 98);
+            this.button_editTask.Name = "button_editTask";
+            this.button_editTask.Size = new System.Drawing.Size(94, 29);
+            this.button_editTask.TabIndex = 7;
+            this.button_editTask.Text = " Edytuj";
+            this.button_editTask.UseVisualStyleBackColor = true;
+            this.button_editTask.Click += new System.EventHandler(this.button_editTask_Click);
             // 
-            // button3_updateChanges
+            // button_updateChanges
             // 
-            this.button3_updateChanges.Image = ((System.Drawing.Image)(resources.GetObject("button3_updateChanges.Image")));
-            this.button3_updateChanges.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3_updateChanges.Location = new System.Drawing.Point(694, 170);
-            this.button3_updateChanges.Name = "button3_updateChanges";
-            this.button3_updateChanges.Size = new System.Drawing.Size(94, 29);
-            this.button3_updateChanges.TabIndex = 8;
-            this.button3_updateChanges.Text = "   Zapisz";
-            this.button3_updateChanges.UseVisualStyleBackColor = true;
+            this.button_updateChanges.Image = ((System.Drawing.Image)(resources.GetObject("button_updateChanges.Image")));
+            this.button_updateChanges.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_updateChanges.Location = new System.Drawing.Point(694, 170);
+            this.button_updateChanges.Name = "button_updateChanges";
+            this.button_updateChanges.Size = new System.Drawing.Size(94, 29);
+            this.button_updateChanges.TabIndex = 8;
+            this.button_updateChanges.Text = "   Zapisz";
+            this.button_updateChanges.UseVisualStyleBackColor = true;
             // 
             // label1_dataStartTask
             // 
@@ -151,14 +152,14 @@ namespace Todo_List
             this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.label1_whenEndingTask);
             this.Controls.Add(this.label1_dataStartTask);
-            this.Controls.Add(this.button3_updateChanges);
-            this.Controls.Add(this.button2_editTask);
-            this.Controls.Add(this.button1_deleteTask);
-            this.Controls.Add(this.monthCalendar2);
-            this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.button_updateChanges);
+            this.Controls.Add(this.button_editTask);
+            this.Controls.Add(this.button_deleteTask);
+            this.Controls.Add(this.monthCalendar_startTask);
+            this.Controls.Add(this.monthCalendar_endTask);
+            this.Controls.Add(this.richTextBox_descriptionTask);
             this.Controls.Add(this.label1_editTaskDescription);
-            this.Controls.Add(this.richTextBox1_editTaskName);
+            this.Controls.Add(this.richTextBox_editTaskName);
             this.Controls.Add(this.label1_editTaskName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditTask";
@@ -171,14 +172,14 @@ namespace Todo_List
         #endregion
 
         private System.Windows.Forms.Label label1_editTaskName;
-        private System.Windows.Forms.RichTextBox richTextBox1_editTaskName;
+        private System.Windows.Forms.RichTextBox richTextBox_editTaskName;
         private System.Windows.Forms.Label label1_editTaskDescription;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.MonthCalendar monthCalendar2;
-        private System.Windows.Forms.Button button1_deleteTask;
-        private System.Windows.Forms.Button button2_editTask;
-        private System.Windows.Forms.Button button3_updateChanges;
+        private System.Windows.Forms.RichTextBox richTextBox_descriptionTask;
+        private System.Windows.Forms.MonthCalendar monthCalendar_endTask;
+        private System.Windows.Forms.MonthCalendar monthCalendar_startTask;
+        private System.Windows.Forms.Button button_deleteTask;
+        private System.Windows.Forms.Button button_editTask;
+        private System.Windows.Forms.Button button_updateChanges;
         private System.Windows.Forms.Label label1_dataStartTask;
         private System.Windows.Forms.Label label1_whenEndingTask;
     }

@@ -33,12 +33,12 @@ namespace Todo_List
             this.textBox1_taskName = new System.Windows.Forms.TextBox();
             this.label_taskName = new System.Windows.Forms.Label();
             this.label1_descriptionTask = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_descriptionTask = new System.Windows.Forms.RichTextBox();
             this.label1_taskStartDay = new System.Windows.Forms.Label();
             this.label1_TaskEndDay = new System.Windows.Forms.Label();
             this.monthCalendar_startTaskDay = new System.Windows.Forms.MonthCalendar();
-            this.monthCalendar1_endTaskDay = new System.Windows.Forms.MonthCalendar();
-            this.button1_addTask = new System.Windows.Forms.Button();
+            this.monthCalendar_endTaskDay = new System.Windows.Forms.MonthCalendar();
+            this.button_addTask = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1_taskName
@@ -66,13 +66,13 @@ namespace Todo_List
             this.label1_descriptionTask.TabIndex = 2;
             this.label1_descriptionTask.Text = "Opis Zadania";
             // 
-            // richTextBox1
+            // richTextBox_descriptionTask
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(73, 227);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(397, 263);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.richTextBox_descriptionTask.Location = new System.Drawing.Point(73, 227);
+            this.richTextBox_descriptionTask.Name = "richTextBox_descriptionTask";
+            this.richTextBox_descriptionTask.Size = new System.Drawing.Size(397, 263);
+            this.richTextBox_descriptionTask.TabIndex = 3;
+            this.richTextBox_descriptionTask.Text = "";
             // 
             // label1_taskStartDay
             // 
@@ -100,24 +100,24 @@ namespace Todo_List
             this.monthCalendar_startTaskDay.TabIndex = 6;
             this.monthCalendar_startTaskDay.TitleBackColor = System.Drawing.Color.DimGray;
             // 
-            // monthCalendar1_endTaskDay
+            // monthCalendar_endTaskDay
             // 
-            this.monthCalendar1_endTaskDay.CalendarDimensions = new System.Drawing.Size(1, 2);
-            this.monthCalendar1_endTaskDay.Location = new System.Drawing.Point(914, 40);
-            this.monthCalendar1_endTaskDay.Name = "monthCalendar1_endTaskDay";
-            this.monthCalendar1_endTaskDay.TabIndex = 7;
-            this.monthCalendar1_endTaskDay.TitleBackColor = System.Drawing.Color.DimGray;
+            this.monthCalendar_endTaskDay.CalendarDimensions = new System.Drawing.Size(1, 2);
+            this.monthCalendar_endTaskDay.Location = new System.Drawing.Point(914, 40);
+            this.monthCalendar_endTaskDay.Name = "monthCalendar_endTaskDay";
+            this.monthCalendar_endTaskDay.TabIndex = 7;
+            this.monthCalendar_endTaskDay.TitleBackColor = System.Drawing.Color.DimGray;
             // 
-            // button1_addTask
+            // button_addTask
             // 
-            this.button1_addTask.Image = ((System.Drawing.Image)(resources.GetObject("button1_addTask.Image")));
-            this.button1_addTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1_addTask.Location = new System.Drawing.Point(1027, 501);
-            this.button1_addTask.Name = "button1_addTask";
-            this.button1_addTask.Size = new System.Drawing.Size(175, 50);
-            this.button1_addTask.TabIndex = 8;
-            this.button1_addTask.Text = "       Dodaj Zadanie";
-            this.button1_addTask.UseVisualStyleBackColor = true;
+            this.button_addTask.Image = ((System.Drawing.Image)(resources.GetObject("button_addTask.Image")));
+            this.button_addTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_addTask.Location = new System.Drawing.Point(1027, 501);
+            this.button_addTask.Name = "button_addTask";
+            this.button_addTask.Size = new System.Drawing.Size(175, 50);
+            this.button_addTask.TabIndex = 8;
+            this.button_addTask.Text = "       Dodaj Zadanie";
+            this.button_addTask.UseVisualStyleBackColor = true;
             // 
             // AddTasks
             // 
@@ -125,12 +125,12 @@ namespace Todo_List
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1274, 623);
-            this.Controls.Add(this.button1_addTask);
-            this.Controls.Add(this.monthCalendar1_endTaskDay);
+            this.Controls.Add(this.button_addTask);
+            this.Controls.Add(this.monthCalendar_endTaskDay);
             this.Controls.Add(this.monthCalendar_startTaskDay);
             this.Controls.Add(this.label1_TaskEndDay);
             this.Controls.Add(this.label1_taskStartDay);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTextBox_descriptionTask);
             this.Controls.Add(this.label1_descriptionTask);
             this.Controls.Add(this.label_taskName);
             this.Controls.Add(this.textBox1_taskName);
@@ -147,11 +147,11 @@ namespace Todo_List
         private System.Windows.Forms.TextBox textBox1_taskName;
         private System.Windows.Forms.Label label_taskName;
         private System.Windows.Forms.Label label1_descriptionTask;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox_descriptionTask;
         private System.Windows.Forms.Label label1_taskStartDay;
         private System.Windows.Forms.Label label1_TaskEndDay;
         private System.Windows.Forms.MonthCalendar monthCalendar_startTaskDay;
-        private System.Windows.Forms.MonthCalendar monthCalendar1_endTaskDay;
-        private System.Windows.Forms.Button button1_addTask;
+        private System.Windows.Forms.MonthCalendar monthCalendar_endTaskDay;
+        private System.Windows.Forms.Button button_addTask;
     }
 }
