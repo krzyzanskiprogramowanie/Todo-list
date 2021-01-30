@@ -34,9 +34,9 @@ namespace Todo_List
             this.label_doing = new System.Windows.Forms.Label();
             this.label_done = new System.Windows.Forms.Label();
             this.panel1_editTask = new System.Windows.Forms.Panel();
-            this.button1_test = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox_toDo = new System.Windows.Forms.ListBox();
+            this.listBox_doing = new System.Windows.Forms.ListBox();
+            this.listBox_done = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // monthCalendar_TodoList
@@ -85,43 +85,44 @@ namespace Todo_List
             this.panel1_editTask.Size = new System.Drawing.Size(882, 172);
             this.panel1_editTask.TabIndex = 7;
             // 
-            // button1_test
+            // listBox_toDo
             // 
-            this.button1_test.Location = new System.Drawing.Point(179, 581);
-            this.button1_test.Name = "button1_test";
-            this.button1_test.Size = new System.Drawing.Size(94, 29);
-            this.button1_test.TabIndex = 8;
-            this.button1_test.Text = "button1";
-            this.button1_test.UseVisualStyleBackColor = true;
-            this.button1_test.Click += new System.EventHandler(this.button1_test_Click);
+            this.listBox_toDo.AllowDrop = true;
+            this.listBox_toDo.FormattingEnabled = true;
+            this.listBox_toDo.ItemHeight = 20;
+            this.listBox_toDo.Location = new System.Drawing.Point(337, 74);
+            this.listBox_toDo.Name = "listBox_toDo";
+            this.listBox_toDo.Size = new System.Drawing.Size(289, 344);
+            this.listBox_toDo.TabIndex = 9;
+            this.listBox_toDo.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox1_DragDrop);
+            this.listBox_toDo.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox1_DragEnter);
+            this.listBox_toDo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox_toDo_MouseDown);
             // 
-            // listBox1
+            // listBox_doing
             // 
-            this.listBox1.AllowDrop = true;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(337, 74);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(289, 344);
-            this.listBox1.TabIndex = 9;
-            this.listBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseClick);
-            this.listBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox1_DragDrop);
-            this.listBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox1_DragEnter);
-            this.listBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDown);
+            this.listBox_doing.AllowDrop = true;
+            this.listBox_doing.FormattingEnabled = true;
+            this.listBox_doing.ItemHeight = 20;
+            this.listBox_doing.Location = new System.Drawing.Point(652, 74);
+            this.listBox_doing.Name = "listBox_doing";
+            this.listBox_doing.Size = new System.Drawing.Size(289, 344);
+            this.listBox_doing.TabIndex = 10;
+            this.listBox_doing.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox2_DragDrop);
+            this.listBox_doing.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox2_DragEnter);
+            this.listBox_doing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox_doing_MouseDown);
             // 
-            // listBox2
+            // listBox_done
             // 
-            this.listBox2.AllowDrop = true;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(663, 69);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(254, 364);
-            this.listBox2.TabIndex = 10;
-            this.listBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listBox2_MouseClick);
-            this.listBox2.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox2_DragDrop);
-            this.listBox2.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox2_DragEnter);
-            this.listBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox2_MouseDown);
+            this.listBox_done.AllowDrop = true;
+            this.listBox_done.FormattingEnabled = true;
+            this.listBox_done.ItemHeight = 20;
+            this.listBox_done.Location = new System.Drawing.Point(964, 74);
+            this.listBox_done.Name = "listBox_done";
+            this.listBox_done.Size = new System.Drawing.Size(289, 344);
+            this.listBox_done.TabIndex = 11;
+            this.listBox_done.DragDrop += new System.Windows.Forms.DragEventHandler(this.listBox_done_DragDrop);
+            this.listBox_done.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox_done_DragEnter);
+            this.listBox_done.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox_done_MouseDown);
             // 
             // TodoList
             // 
@@ -130,9 +131,9 @@ namespace Todo_List
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1274, 623);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1_test);
+            this.Controls.Add(this.listBox_done);
+            this.Controls.Add(this.listBox_doing);
+            this.Controls.Add(this.listBox_toDo);
             this.Controls.Add(this.panel1_editTask);
             this.Controls.Add(this.label_done);
             this.Controls.Add(this.label_doing);
@@ -156,8 +157,8 @@ namespace Todo_List
         private System.Windows.Forms.Label label_doing;
         private System.Windows.Forms.Label label_ToDo;
         private System.Windows.Forms.Panel panel1_editTask;
-        private System.Windows.Forms.Button button1_test;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox_toDo;
+        private System.Windows.Forms.ListBox listBox_doing;
+        private System.Windows.Forms.ListBox listBox_done;
     }
 }

@@ -10,9 +10,10 @@ namespace Todo_List
 {
     public partial class EditTask : Form
     {
-        public EditTask()
+        public EditTask(string taskName)
         {
             InitializeComponent();
+            richTextBox1_editTaskName.Text = taskName;
         }
     }
 }
