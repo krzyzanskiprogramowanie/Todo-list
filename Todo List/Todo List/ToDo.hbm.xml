@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Todo_List" assembly="Todo List">
+	<class name="ToDo" table="ToDo">
+		<id name="Id" column="Id">
+			<generator class="identity" />
+		</id>
+		<property name="TaskName" column="TaskName" />
+		<property name="TaskDescription" column="TaskDescription" />
+		<property name="Status" column="Status" />
+		<property name="StartDate" column="StartDate" />
+		<property name="EndDate" column="EndDate" />
+
+
+	</class>
+</hibernate-mapping>

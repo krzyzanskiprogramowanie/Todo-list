@@ -118,6 +118,7 @@ namespace Todo_List
             this.button_addTask.TabIndex = 8;
             this.button_addTask.Text = "       Dodaj Zadanie";
             this.button_addTask.UseVisualStyleBackColor = true;
+            this.button_addTask.Click += new System.EventHandler(this.button_addTask_Click);
             // 
             // AddTasks
             // 
