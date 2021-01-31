@@ -15,9 +15,12 @@ namespace Todo_List
     {
         int mouseX;
         int mouseX1;
+        int id;
         private Configuration myConfiguration;
         private NHibernate.ISessionFactory mySessionFactory;
         private ISession mySession;
+        string taskName, taskDescription;
+        DateTime startDate, endDate;
         public TodoList()
         {
             InitializeComponent();
@@ -60,7 +63,6 @@ namespace Todo_List
                     listBox_done.Items.Add(item.TaskName + "                                                                      (id=" + item.Id);
                 }
             }
-
         }
         public void editTaskView(Form form, Panel panel)
         {
@@ -79,9 +81,57 @@ namespace Todo_List
         private void listBox1_DragDrop(object sender, DragEventArgs e)
         {
             listBox_toDo.Items.Add(e.Data.GetData(DataFormats.Text));
+            string taskNameFromListBox = Convert.ToString(e.Data.GetData(DataFormats.Text));
+            id = Convert.ToInt32(taskNameFromListBox.Substring(taskNameFromListBox.IndexOf("(id=") + "(id=".Length));
+            updateDatabaseStatus("ToDo");
             listBox_doing.Items.Remove(e.Data.GetData(DataFormats.Text));
             listBox_done.Items.Remove(e.Data.GetData(DataFormats.Text));
 
+        }
+
+
+        public void updateDatabaseStatus(string status)
+        {
+
+            if (mySession != null && mySession.IsOpen)
+            {
+                mySession.Close();
+            }
+            if (mySessionFactory != null && !mySessionFactory.IsClosed)
+            {
+                mySessionFactory.Close();
+            }
+            // Inicjowanie NHibernate
+            myConfiguration = new Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory();
+            mySession = mySessionFactory.OpenSession();
+
+            using (mySession.BeginTransaction())
+            {
+                ICriteria criteria = mySession.CreateCriteria<ToDo>();
+                IList<ToDo> list = criteria.List<ToDo>().Where(a => a.Id == id).ToList();
+                foreach (var item in list)
+                {
+                    taskName = item.TaskName.ToString();
+                    taskDescription = item.TaskDescription.ToString();
+                    startDate = item.StartDate;
+                    endDate = item.EndDate;
+                }
+                ToDo LotoDo = new ToDo
+                {
+                    TaskName = taskName,
+                    TaskDescription = taskDescription,
+                    EndDate = endDate,
+                    StartDate = DateTime.Now,
+                    Id = id,
+                    Status = status
+
+                };
+                mySession.Merge(LotoDo);
+
+                mySession.Transaction.Commit();
+            }
         }
         private void listBox1_DragEnter(object sender, DragEventArgs e)
         {
@@ -109,6 +159,9 @@ namespace Todo_List
         private void listBox2_DragDrop(object sender, DragEventArgs e)
         {
             listBox_doing.Items.Add(e.Data.GetData(DataFormats.Text));
+            string taskNameFromListBox = Convert.ToString(e.Data.GetData(DataFormats.Text));
+            id = Convert.ToInt32(taskNameFromListBox.Substring(taskNameFromListBox.IndexOf("(id=") + "(id=".Length));
+            updateDatabaseStatus("doing");
             listBox_toDo.Items.Remove(e.Data.GetData(DataFormats.Text));
             listBox_done.Items.Remove(e.Data.GetData(DataFormats.Text));
 
@@ -140,6 +193,9 @@ namespace Todo_List
         private void listBox_done_DragDrop(object sender, DragEventArgs e)
         {
             listBox_done.Items.Add(e.Data.GetData(DataFormats.Text));
+            string taskNameFromListBox = Convert.ToString(e.Data.GetData(DataFormats.Text));
+            id = Convert.ToInt32(taskNameFromListBox.Substring(taskNameFromListBox.IndexOf("(id=") + "(id=".Length));
+            updateDatabaseStatus("done");
             listBox_toDo.Items.Remove(e.Data.GetData(DataFormats.Text));
             listBox_doing.Items.Remove(e.Data.GetData(DataFormats.Text));
 
