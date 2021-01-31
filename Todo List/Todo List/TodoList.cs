@@ -33,7 +33,7 @@ namespace Todo_List
             {
                 mySessionFactory.Close();
             }
-            // Inicjowanie NHibernate
+            // Initializing NHibernate
             myConfiguration = new Configuration();
             myConfiguration.Configure();
             mySessionFactory = myConfiguration.BuildSessionFactory();
@@ -44,20 +44,20 @@ namespace Todo_List
             using (mySession.BeginTransaction())
             {
                 ICriteria criteria = mySession.CreateCriteria<ToDo>();
-                IList<ToDo> list = criteria.List<ToDo>().Where(a=>a.Status=="ToDo").ToList();
+                IList<ToDo> list = criteria.List<ToDo>().Where(a => a.Status == "ToDo").ToList();
                 foreach (var item in list)
                 {
-                    listBox_toDo.Items.Add(item.TaskName);
+                    listBox_toDo.Items.Add(item.TaskName +"                                                                      (id="+ item.Id);
                 }
                  list = criteria.List<ToDo>().Where(a => a.Status == "doing").ToList();
                 foreach (var item in list)
                 {
-                    listBox_doing.Items.Add(item.TaskName);
+                    listBox_doing.Items.Add(item.TaskName + "                                                                      (id=" + item.Id);
                 }
                 list = criteria.List<ToDo>().Where(a => a.Status == "done").ToList();
                 foreach (var item in list)
                 {
-                    listBox_done.Items.Add(item.TaskName);
+                    listBox_done.Items.Add(item.TaskName + "                                                                      (id=" + item.Id);
                 }
             }
         }
@@ -82,7 +82,6 @@ namespace Todo_List
         private void listBox1_DragEnter(object sender, DragEventArgs e)
         {
             mouseX1 = MousePosition.X;
-            //mouseX1 != mouseX 
             if (e.Data.GetDataPresent(DataFormats.Text) && (((mouseX - mouseX1 < -5) || mouseX - mouseX1 > 5)))
                 e.Effect = DragDropEffects.Copy;
             else

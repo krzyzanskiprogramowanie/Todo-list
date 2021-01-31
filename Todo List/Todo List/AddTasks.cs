@@ -44,7 +44,7 @@ namespace Todo_List
                     TaskDescription = richTextBox_descriptionTask.Text,
                     EndDate = monthCalendar_endTaskDay.SelectionRange.Start,
                     StartDate = monthCalendar_startTaskDay.SelectionRange.Start,
-                    Status = "done"
+                    Status = "ToDo"
                 };
                 mySession.Save(LotoDo);
                 mySession.Transaction.Commit();
