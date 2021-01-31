@@ -40,11 +40,11 @@ namespace Todo_List
             {
                 ToDo LotoDo = new ToDo
                 {
-                    TaskName = "test",
-                    TaskDescription = "opis",
-                    EndDate = DateTime.Now,
-                    StartDate = DateTime.Now,
-                    Status = "1"
+                    TaskName = textBox1_taskName.Text,
+                    TaskDescription = richTextBox_descriptionTask.Text,
+                    EndDate = monthCalendar_endTaskDay.SelectionRange.Start,
+                    StartDate = monthCalendar_startTaskDay.SelectionRange.Start,
+                    Status = "done"
                 };
                 mySession.Save(LotoDo);
                 mySession.Transaction.Commit();

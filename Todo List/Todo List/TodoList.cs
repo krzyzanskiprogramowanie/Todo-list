@@ -1,8 +1,11 @@
-﻿using System;
+﻿using NHibernate;
+using NHibernate.Cfg;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -12,24 +15,52 @@ namespace Todo_List
     {
         int mouseX;
         int mouseX1;
-
+        private Configuration myConfiguration;
+        private NHibernate.ISessionFactory mySessionFactory;
+        private ISession mySession;
         public TodoList()
         {
             InitializeComponent();
 
-            //test value
-            string[] items = new string[] { "item1", "item2", "item3", "item4", "item5", "item6" };
-            string[] items2 = new string[] { "m1", "m2", "m3", "m4", "m5" };
-            string[] items3 = new string[] { "em1", "em2", "em3", "em4" };
-            listBox_toDo.Items.AddRange(items);
-            listBox_doing.Items.AddRange(items2);
-            listBox_done.Items.AddRange(items3);
-
         }
         private void TodoList_Load(object sender, EventArgs e)
         {
+            if (mySession != null && mySession.IsOpen)
+            {
+                mySession.Close();
+            }
+            if (mySessionFactory != null && !mySessionFactory.IsClosed)
+            {
+                mySessionFactory.Close();
+            }
+            // Inicjowanie NHibernate
+            myConfiguration = new Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory();
+            mySession = mySessionFactory.OpenSession();
+
+
+            //Show TaskNameFromDatabase in ListBox
+            using (mySession.BeginTransaction())
+            {
+                ICriteria criteria = mySession.CreateCriteria<ToDo>();
+                IList<ToDo> list = criteria.List<ToDo>().Where(a=>a.Status=="ToDo").ToList();
+                foreach (var item in list)
+                {
+                    listBox_toDo.Items.Add(item.TaskName);
+                }
+                 list = criteria.List<ToDo>().Where(a => a.Status == "doing").ToList();
+                foreach (var item in list)
+                {
+                    listBox_doing.Items.Add(item.TaskName);
+                }
+                list = criteria.List<ToDo>().Where(a => a.Status == "done").ToList();
+                foreach (var item in list)
+                {
+                    listBox_done.Items.Add(item.TaskName);
+                }
+            }
         }
-      
         public void editTaskView(Form form, Panel panel)
         {
             form.TopLevel = false;
