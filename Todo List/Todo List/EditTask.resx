@@ -57,11 +57,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
   <data name="button_deleteTask.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cwAAAHMBY8FD/gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD+SURBVDhPjZAx
+        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD+SURBVDhPjZAx
         SkNBFEUHO12Hra1Zgr0WSgptYhMJaKMIGsQUaqMgSROb2CiIrsBGXYboEtxC4rn//vkwJJn8A4e5/82b
         94cJc1jFH5yUKqtWm1O8dyxQVm0uDfzD+MdFqncdK7p45VgL9epMxQW+40lN1aszFWv4iy94vUD1qFdn
         Et5w0zE0y1VNsTHWtvDVMeURdx2LhxK6ZrxqrO3hyDFlgG3H7IAD7Dum3OCxY3aAHlFvMcU5XjpmB/Tw
@@ -72,7 +72,7 @@
   <data name="button_editTask.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        dAAAAHQBMYXlgQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAECSURBVDhPjdEx
+        cQAAAHEBHD+AdwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAECSURBVDhPjdEx
         TsMwGMVxM3CJTEmzRIrEwsTEClfoCaiEKsI5QGJi4g5sKEPF1K0XKJ2Awi0Q4f/ADo4TR/mk3xDb79VW
         TdM0kzEHWGKHJxzBnGKFbcQzDqHwPV5xjjvUMC+4xVnEMfxwam+jEt3E6KsIr+swLvwGF06hMj0nXsD4
         4cyuubDWtT9cYDd16B0zu5ZBZb9hu9YvYIbCM3TCdr1bwLjwHrkXVlknbPd6BRf4hAvnaMPQP3MzVrBG
@@ -83,7 +83,7 @@
   <data name="button_updateChanges.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cwAAAHMBY8FD/gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADUSURBVDhPzdM5
+        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADUSURBVDhPzdM5
         CgJBEIXhURDxCN7ECxh6AFMDT2Jg5gKCmWCmYKKBeAwv4AncAwXB5S+mqynsxgUMfPDRPUK9GWbshHSx
         xxY3t1pHXNx6xQg5+Miw/rBzq00Jc7cuMMAEvsQOvSuQNYM+fMm3BZIs5EnGcmGHluihaQyxwgxtaKTk
         IBtbUEQN9Ygq8rCRlxx97E/z+4IGTrhHrFGBTVCwQSHdBiljmm59goIzYndX+hk1QcGr92H/B5o/KXh3

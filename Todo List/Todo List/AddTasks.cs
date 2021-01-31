@@ -47,6 +47,7 @@ namespace Todo_List
                     Status = "ToDo"
                 };
                 mySession.Save(LotoDo);
+                
                 mySession.Transaction.Commit();
             }
         }

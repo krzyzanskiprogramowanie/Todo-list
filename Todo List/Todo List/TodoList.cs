@@ -23,7 +23,7 @@ namespace Todo_List
             InitializeComponent();
 
         }
-        private void TodoList_Load(object sender, EventArgs e)
+        public void TodoList_Load(object sender, EventArgs e)
         {
             if (mySession != null && mySession.IsOpen)
             {
@@ -38,11 +38,11 @@ namespace Todo_List
             myConfiguration.Configure();
             mySessionFactory = myConfiguration.BuildSessionFactory();
             mySession = mySessionFactory.OpenSession();
-
-
+            
             //Show TaskNameFromDatabase in ListBox
             using (mySession.BeginTransaction())
             {
+                
                 ICriteria criteria = mySession.CreateCriteria<ToDo>();
                 IList<ToDo> list = criteria.List<ToDo>().Where(a => a.Status == "ToDo").ToList();
                 foreach (var item in list)
@@ -60,6 +60,7 @@ namespace Todo_List
                     listBox_done.Items.Add(item.TaskName + "                                                                      (id=" + item.Id);
                 }
             }
+
         }
         public void editTaskView(Form form, Panel panel)
         {
@@ -69,7 +70,10 @@ namespace Todo_List
             form.Show();
         }
 
-
+        public void reset()
+        {
+            this.Close();
+        }
 
         //to do
         private void listBox1_DragDrop(object sender, DragEventArgs e)
@@ -91,6 +95,7 @@ namespace Todo_List
 
         private void listBox_toDo_MouseDown(object sender, MouseEventArgs e)
         {
+
             if (listBox_toDo.SelectedItem != null)
             {
                 EditTask editTask = new EditTask(listBox_toDo.SelectedItem.ToString());

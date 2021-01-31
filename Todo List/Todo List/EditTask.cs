@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,11 @@ namespace Todo_List
 {
     public partial class EditTask : Form
     {
+        int id;
         private Configuration myConfiguration;
         private NHibernate.ISessionFactory mySessionFactory;
         private ISession mySession;
+        string status;
         public EditTask(string taskName)
         {
             InitializeComponent();
@@ -35,7 +38,7 @@ namespace Todo_List
             mySessionFactory = myConfiguration.BuildSessionFactory();
             mySession = mySessionFactory.OpenSession();
 
-            int id = Convert.ToInt32(taskName.Substring(taskName.IndexOf("(id=") + "(id=".Length));
+             id = Convert.ToInt32(taskName.Substring(taskName.IndexOf("(id=") + "(id=".Length));
 
             //Show TaskNameFromDatabase in editPanel
             using (mySession.BeginTransaction())
@@ -49,6 +52,7 @@ namespace Todo_List
                     richTextBox_descriptionTask.Text = item.TaskDescription.ToString();
                     monthCalendar_startTask.SetDate(item.StartDate);
                     monthCalendar_endTask.SetDate(item.EndDate);
+                    status = item.Status;
                 }
 
             }
@@ -75,6 +79,62 @@ namespace Todo_List
         private void button_editTask_Click(object sender, EventArgs e)
         {
             enableEdits();
+        }
+
+        private void button_deleteTask_Click(object sender, EventArgs e)
+        {
+            using (ISession session=mySessionFactory.OpenSession())
+            {
+                SqlConnection con = session.Connection as SqlConnection;
+                SqlCommand cmd = new SqlCommand($"Delete from ToDo where Id={id}", con);
+                cmd.ExecuteNonQuery();
+            }
+
+            TodoList todoList = new TodoList();
+            nav(todoList);
+        }
+
+        public void nav(Form form)
+        {
+            Panel panel = new Panel();
+            form.TopLevel = false;
+            panel.Controls.Clear();
+            panel.Controls.Add(form);
+            form.Show();
+        }
+
+        private void button_updateChanges_Click(object sender, EventArgs e)
+        {
+            if (mySession != null && mySession.IsOpen)
+            {
+                mySession.Close();
+            }
+            if (mySessionFactory != null && !mySessionFactory.IsClosed)
+            {
+                mySessionFactory.Close();
+            }
+            // Inicjowanie NHibernate
+            myConfiguration = new Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory();
+            mySession = mySessionFactory.OpenSession();
+
+            using (mySession.BeginTransaction())
+            {
+                ToDo LotoDo = new ToDo
+                {
+                    TaskName = richTextBox_editTaskName.Text,
+                    TaskDescription = richTextBox_descriptionTask.Text,
+                    EndDate = monthCalendar_endTask.SelectionRange.Start,
+                    StartDate = monthCalendar_startTask.SelectionRange.Start,
+                    Id = id,
+                    Status = status
+                    
+                };
+                mySession.Update(LotoDo);
+
+                mySession.Transaction.Commit();
+            }
         }
     }
 }

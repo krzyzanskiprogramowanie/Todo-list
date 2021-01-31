@@ -101,6 +101,7 @@ namespace Todo_List
             this.button_deleteTask.TabIndex = 6;
             this.button_deleteTask.Text = "Usuń";
             this.button_deleteTask.UseVisualStyleBackColor = true;
+            this.button_deleteTask.Click += new System.EventHandler(this.button_deleteTask_Click);
             // 
             // button_editTask
             // 
@@ -124,6 +125,7 @@ namespace Todo_List
             this.button_updateChanges.TabIndex = 8;
             this.button_updateChanges.Text = "   Zapisz";
             this.button_updateChanges.UseVisualStyleBackColor = true;
+            this.button_updateChanges.Click += new System.EventHandler(this.button_updateChanges_Click);
             // 
             // label1_dataStartTask
             // 
