@@ -56,6 +56,7 @@ namespace Todo_List
             // 
             // richTextBox_editTaskName
             // 
+            this.richTextBox_editTaskName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_editTaskName.Location = new System.Drawing.Point(2, 32);
             this.richTextBox_editTaskName.Name = "richTextBox_editTaskName";
             this.richTextBox_editTaskName.Size = new System.Drawing.Size(168, 121);
@@ -75,6 +76,7 @@ namespace Todo_List
             // 
             // richTextBox_descriptionTask
             // 
+            this.richTextBox_descriptionTask.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_descriptionTask.Location = new System.Drawing.Point(191, 32);
             this.richTextBox_descriptionTask.Name = "richTextBox_descriptionTask";
             this.richTextBox_descriptionTask.Size = new System.Drawing.Size(487, 121);
