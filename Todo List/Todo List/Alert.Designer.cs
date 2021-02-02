@@ -30,16 +30,20 @@ namespace Todo_List
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Alert));
             this.label1 = new System.Windows.Forms.Label();
             this.timer_notification = new System.Windows.Forms.Timer(this.components);
-            this.button_exit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_exit = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_exit)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(30, 40);
+            this.label1.Location = new System.Drawing.Point(95, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(327, 20);
             this.label1.TabIndex = 0;
@@ -47,31 +51,43 @@ namespace Todo_List
             // 
             // timer_notification
             // 
+            this.timer_notification.Interval = 10;
             this.timer_notification.Tick += new System.EventHandler(this.timer_notification_Tick);
             // 
-            // button_exit
+            // pictureBox1
             // 
-            this.button_exit.FlatAppearance.BorderSize = 0;
-            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_exit.Location = new System.Drawing.Point(384, 36);
-            this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(94, 29);
-            this.button_exit.TabIndex = 1;
-            this.button_exit.Text = "X";
-            this.button_exit.UseVisualStyleBackColor = true;
-            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
+            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(17, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 73);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox_exit
+            // 
+            this.pictureBox_exit.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_exit.Image")));
+            this.pictureBox_exit.Location = new System.Drawing.Point(409, 31);
+            this.pictureBox_exit.Name = "pictureBox_exit";
+            this.pictureBox_exit.Size = new System.Drawing.Size(46, 48);
+            this.pictureBox_exit.TabIndex = 3;
+            this.pictureBox_exit.TabStop = false;
+            this.pictureBox_exit.Click += new System.EventHandler(this.pictureBox_exit_Click);
             // 
             // Alert
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(506, 101);
-            this.Controls.Add(this.button_exit);
+            this.Controls.Add(this.pictureBox_exit);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Alert";
             this.Text = "Alert";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_exit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,7 +96,8 @@ namespace Todo_List
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timer_notification;
-        private System.Windows.Forms.Button button_exit;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        internal System.Windows.Forms.Timer timer_notification;
+        private System.Windows.Forms.PictureBox pictureBox_exit;
     }
 }

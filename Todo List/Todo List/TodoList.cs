@@ -25,7 +25,6 @@ namespace Todo_List
         {
             InitializeComponent();
         }
-
         public void editTaskView(Form form, Panel panel)
         {
             form.TopLevel = false;

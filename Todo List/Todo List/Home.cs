@@ -64,28 +64,24 @@ namespace Todo_List
         {
             Application.Exit();
         }
-
         private void button_addTasks_Click(object sender, EventArgs e)
         {
             AddTasks addTasks = new AddTasks();
             nav(addTasks, panel_Content);
 
         }
-
         private void button_TodoList_Click(object sender, EventArgs e)
         {
             TodoList todoList = new TodoList();
             nav(todoList, panel_Content);
 
         }
-
         private void button_allTasks_Click(object sender, EventArgs e)
         {
             AllTasks allTasks = new AllTasks();
             nav(allTasks, panel_Content);
 
         }
-
         private void button_reminder_Click(object sender, EventArgs e)
         {
             Reminders reminders = new Reminders();
@@ -99,7 +95,5 @@ namespace Todo_List
             panel.Controls.Add(form);
             form.Show();
         }
-
-       
     }
 }
