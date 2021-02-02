@@ -26,7 +26,7 @@ namespace Todo_List
             InitializeComponent();
 
         }
-        public void TodoList_Load(object sender, EventArgs e)
+        public  void TodoList_Load(object sender, EventArgs e)
         {
             monthCalendar_TodoList_DateChanged(null,null);
         }
@@ -63,15 +63,14 @@ namespace Todo_List
 
         private void listBox_toDo_MouseDown(object sender, MouseEventArgs e)
         {
+            mouseX = MousePosition.X;
 
             if (listBox_toDo.SelectedItem != null)
             {
                 EditTask editTask = new EditTask(listBox_toDo.SelectedItem.ToString());
                 editTaskView(editTask, panel1_editTask);
-            }
-            mouseX = MousePosition.X;
-            if(listBox_toDo.SelectedItem != null)
                 listBox_doing.DoDragDrop(listBox_toDo.SelectedItem.ToString(), DragDropEffects.Copy);
+            }
         }
         //doing
         private void listBox2_DragDrop(object sender, DragEventArgs e)
@@ -96,16 +95,14 @@ namespace Todo_List
 
         private void listBox_doing_MouseDown(object sender, MouseEventArgs e)
         {
+            mouseX = MousePosition.X;
+
             if (listBox_doing.SelectedItem != null)
             {
                 EditTask editTask = new EditTask(listBox_doing.SelectedItem.ToString());
                 editTaskView(editTask, panel1_editTask);
-
-            }
-            mouseX = MousePosition.X;
-            if (listBox_doing.SelectedItem != null)
                 listBox_toDo.DoDragDrop(listBox_doing.SelectedItem.ToString(), DragDropEffects.Copy);
-            
+            }
         }
         //done
         private void listBox_done_DragDrop(object sender, DragEventArgs e)
@@ -119,7 +116,7 @@ namespace Todo_List
 
         }
 
-        private void monthCalendar_TodoList_DateChanged(object sender, DateRangeEventArgs e)
+        public void monthCalendar_TodoList_DateChanged(object sender, DateRangeEventArgs e)
         {
             listBox_toDo.Items.Clear();
             listBox_doing.Items.Clear();
@@ -176,19 +173,23 @@ namespace Todo_List
                 e.Effect = DragDropEffects.None;
         }
 
+        private void button_refresh_Click(object sender, EventArgs e)
+        {
+               monthCalendar_TodoList_DateChanged(null, null);
+        }
+
         private void listBox_done_MouseDown(object sender, MouseEventArgs e)
         {
+            mouseX = MousePosition.X;
+
             if (listBox_done.SelectedItem != null)
             {
                 EditTask editTask = new EditTask(listBox_done.SelectedItem.ToString());
                 editTaskView(editTask, panel1_editTask);
-            }
-            mouseX = MousePosition.X;
-            if (listBox_done.SelectedItem != null)
                 listBox_toDo.DoDragDrop(listBox_done.SelectedItem.ToString(), DragDropEffects.Copy);
+
+            }
         }
-
-
 
         public void updateDatabaseStatus(string status)
         {

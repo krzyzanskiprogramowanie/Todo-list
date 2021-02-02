@@ -41,6 +41,7 @@ namespace Todo_List
             this.button_updateChanges = new System.Windows.Forms.Button();
             this.label1_dataStartTask = new System.Windows.Forms.Label();
             this.label1_whenEndingTask = new System.Windows.Forms.Label();
+            this.label_errorsEditTasks = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1_editTaskName
@@ -59,6 +60,7 @@ namespace Todo_List
             this.richTextBox_editTaskName.Size = new System.Drawing.Size(168, 121);
             this.richTextBox_editTaskName.TabIndex = 1;
             this.richTextBox_editTaskName.Text = "";
+            this.richTextBox_editTaskName.TextChanged += new System.EventHandler(this.richTextBox_editTaskName_TextChanged);
             // 
             // label1_editTaskDescription
             // 
@@ -83,6 +85,7 @@ namespace Todo_List
             this.monthCalendar_endTask.Name = "monthCalendar_endTask";
             this.monthCalendar_endTask.TabIndex = 4;
             this.monthCalendar_endTask.TitleBackColor = System.Drawing.Color.DimGray;
+            this.monthCalendar_endTask.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_endTask_DateChanged);
             // 
             // monthCalendar_startTask
             // 
@@ -90,6 +93,7 @@ namespace Todo_List
             this.monthCalendar_startTask.Name = "monthCalendar_startTask";
             this.monthCalendar_startTask.TabIndex = 5;
             this.monthCalendar_startTask.TitleBackColor = System.Drawing.Color.DimGray;
+            this.monthCalendar_startTask.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_startTask_DateChanged);
             // 
             // button_deleteTask
             // 
@@ -145,6 +149,15 @@ namespace Todo_List
             this.label1_whenEndingTask.TabIndex = 10;
             this.label1_whenEndingTask.Text = "Do kiedy:";
             // 
+            // label_errorsEditTasks
+            // 
+            this.label_errorsEditTasks.AutoSize = true;
+            this.label_errorsEditTasks.ForeColor = System.Drawing.Color.Red;
+            this.label_errorsEditTasks.Location = new System.Drawing.Point(290, 160);
+            this.label_errorsEditTasks.Name = "label_errorsEditTasks";
+            this.label_errorsEditTasks.Size = new System.Drawing.Size(0, 20);
+            this.label_errorsEditTasks.TabIndex = 11;
+            // 
             // EditTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -152,6 +165,7 @@ namespace Todo_List
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.label_errorsEditTasks);
             this.Controls.Add(this.label1_whenEndingTask);
             this.Controls.Add(this.label1_dataStartTask);
             this.Controls.Add(this.button_updateChanges);
@@ -184,5 +198,6 @@ namespace Todo_List
         private System.Windows.Forms.Button button_updateChanges;
         private System.Windows.Forms.Label label1_dataStartTask;
         private System.Windows.Forms.Label label1_whenEndingTask;
+        private System.Windows.Forms.Label label_errorsEditTasks;
     }
 }

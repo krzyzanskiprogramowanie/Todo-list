@@ -22,42 +22,55 @@ namespace Todo_List
 
         private void button_addTask_Click(object sender, EventArgs e)
         {
-            if (mySession != null && mySession.IsOpen)
+            if (textBox1_taskName.TextLength <1)
             {
-                mySession.Close();
+                label_errors_addTasks.Text = "Musisz podać tytuł zadania";
+                button_addTask.Enabled = false;
             }
-            if (mySessionFactory != null && !mySessionFactory.IsClosed)
+            else
             {
-                mySessionFactory.Close();
-            }
-            // Initializing NHibernate
-            myConfiguration = new Configuration();
-            myConfiguration.Configure();
-            mySessionFactory = myConfiguration.BuildSessionFactory();
-            mySession = mySessionFactory.OpenSession();
+                label_errors_addTasks.Text = "";
+                button_addTask.Enabled = true;
 
-            using (mySession.BeginTransaction())
-            {
-                ToDo LotoDo = new ToDo
+                if (mySession != null && mySession.IsOpen)
                 {
-                    TaskName = textBox1_taskName.Text,
-                    TaskDescription = richTextBox_descriptionTask.Text,
-                    EndDate = monthCalendar_endTaskDay.SelectionRange.Start,
-                    StartDate = monthCalendar_startTaskDay.SelectionRange.Start,
-                    Status = "ToDo"
-                };
-                mySession.Save(LotoDo);
-                
-                mySession.Transaction.Commit();
+                    mySession.Close();
+                }
+                if (mySessionFactory != null && !mySessionFactory.IsClosed)
+                {
+                    mySessionFactory.Close();
+                }
+                // Initializing NHibernate
+                myConfiguration = new Configuration();
+                myConfiguration.Configure();
+                mySessionFactory = myConfiguration.BuildSessionFactory();
+                mySession = mySessionFactory.OpenSession();
+
+                using (mySession.BeginTransaction())
+                {
+                    ToDo LotoDo = new ToDo
+                    {
+                        TaskName = textBox1_taskName.Text,
+                        TaskDescription = richTextBox_descriptionTask.Text,
+                        EndDate = monthCalendar_endTaskDay.SelectionRange.Start,
+                        StartDate = monthCalendar_startTaskDay.SelectionRange.Start,
+                        Status = "ToDo"
+                    };
+                    mySession.Save(LotoDo);
+
+                    mySession.Transaction.Commit();
+                }
+                MessageBox.Show("Zadanie zostało dodane");
             }
+           
         }
 
         //Protection against invalid data
         private void textBox1_taskName_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1_taskName.TextLength > 30)
+            if (textBox1_taskName.TextLength > 30 || textBox1_taskName.TextLength<1)
             {
-                label_errors_addTasks.Text = "Nazwa Zadania powinna mieć mniej niż 30 znaków";
+                label_errors_addTasks.Text = "Nazwa Zadania powinna mieć mniej niż 30 znaków i więcej niż 0";
                 button_addTask.Enabled = false;
             }
             else

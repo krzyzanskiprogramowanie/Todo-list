@@ -58,14 +58,27 @@ namespace Todo_List
             }
 
         }
-
         public void enableEdits()
         {
-            richTextBox_editTaskName.Enabled = true;
-            richTextBox_descriptionTask.Enabled = true;
-            monthCalendar_startTask.Enabled = true;
-            monthCalendar_endTask.Enabled = true;
-            button_updateChanges.Enabled = true;
+            if (richTextBox_editTaskName.TextLength < 1)
+            {
+                richTextBox_editTaskName.Enabled = false;
+                richTextBox_descriptionTask.Enabled =false;
+                monthCalendar_startTask.Enabled = false;
+                monthCalendar_endTask.Enabled = false;
+                button_updateChanges.Enabled = false;
+                richTextBox_descriptionTask.Text = "Element został usunięty odśwież strone przyciskiem z lewiej strony !";
+
+            }
+            else
+            {
+                richTextBox_editTaskName.Enabled = true;
+                richTextBox_descriptionTask.Enabled = true;
+                monthCalendar_startTask.Enabled = true;
+                monthCalendar_endTask.Enabled = true;
+                button_updateChanges.Enabled = true;
+            }
+            
         }
         public void disableEdits()
         {
@@ -83,26 +96,15 @@ namespace Todo_List
 
         private void button_deleteTask_Click(object sender, EventArgs e)
         {
-            using (ISession session=mySessionFactory.OpenSession())
-            {
-                SqlConnection con = session.Connection as SqlConnection;
-                SqlCommand cmd = new SqlCommand($"Delete from ToDo where Id={id}", con);
-                cmd.ExecuteNonQuery();
-            }
-
-            TodoList todoList = new TodoList();
-            nav(todoList);
+            
+                using (ISession session = mySessionFactory.OpenSession())
+                {
+                    SqlConnection con = session.Connection as SqlConnection;
+                    SqlCommand cmd = new SqlCommand($"Delete from ToDo where Id={id}", con);
+                    cmd.ExecuteNonQuery();
+                }
+                this.Close();
         }
-
-        public void nav(Form form)
-        {
-            Panel panel = new Panel();
-            form.TopLevel = false;
-            panel.Controls.Clear();
-            panel.Controls.Add(form);
-            form.Show();
-        }
-
         private void button_updateChanges_Click(object sender, EventArgs e)
         {
             if (mySession != null && mySession.IsOpen)
@@ -113,7 +115,6 @@ namespace Todo_List
             {
                 mySessionFactory.Close();
             }
-            // Inicjowanie NHibernate
             myConfiguration = new Configuration();
             myConfiguration.Configure();
             mySessionFactory = myConfiguration.BuildSessionFactory();
@@ -134,6 +135,48 @@ namespace Todo_List
                 mySession.Update(LotoDo);
 
                 mySession.Transaction.Commit();
+            }
+        }
+
+        private void monthCalendar_startTask_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            if (monthCalendar_startTask.SelectionRange.Start > monthCalendar_endTask.SelectionRange.Start)
+            {
+                label_errorsEditTasks.Text = "Data rozpoczęcia zadania nie może być większa niż data zakończenia !";
+                button_updateChanges.Enabled = false;
+            }
+            else
+            {
+                label_errorsEditTasks.Text = "";
+                button_updateChanges.Enabled = true;
+            }
+        }
+
+        private void monthCalendar_endTask_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            if (monthCalendar_startTask.SelectionRange.Start > monthCalendar_endTask.SelectionRange.Start)
+            {
+                label_errorsEditTasks.Text = "Data rozpoczęcia zadania nie może być większa niż data zakończenia !";
+                button_updateChanges.Enabled = false;
+            }
+            else
+            {
+                label_errorsEditTasks.Text = "";
+                button_updateChanges.Enabled = true;
+            }
+        }
+
+        private void richTextBox_editTaskName_TextChanged(object sender, EventArgs e)
+        {
+            if (richTextBox_editTaskName.TextLength > 30 || richTextBox_editTaskName.TextLength < 1)
+            {
+                label_errorsEditTasks.Text = "Nazwa Zadania powinna mieć mniej niż 30 znaków i więcej niż 0";
+                button_updateChanges.Enabled = false;
+            }
+            else
+            {
+                label_errorsEditTasks.Text = "";
+                button_updateChanges.Enabled = true;
             }
         }
     }

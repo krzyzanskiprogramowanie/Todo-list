@@ -37,6 +37,7 @@ namespace Todo_List
             this.listBox_toDo = new System.Windows.Forms.ListBox();
             this.listBox_doing = new System.Windows.Forms.ListBox();
             this.listBox_done = new System.Windows.Forms.ListBox();
+            this.button_refresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // monthCalendar_TodoList
@@ -125,6 +126,16 @@ namespace Todo_List
             this.listBox_done.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBox_done_DragEnter);
             this.listBox_done.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBox_done_MouseDown);
             // 
+            // button_refresh
+            // 
+            this.button_refresh.Location = new System.Drawing.Point(104, 582);
+            this.button_refresh.Name = "button_refresh";
+            this.button_refresh.Size = new System.Drawing.Size(94, 29);
+            this.button_refresh.TabIndex = 12;
+            this.button_refresh.Text = "Odśwież";
+            this.button_refresh.UseVisualStyleBackColor = true;
+            this.button_refresh.Click += new System.EventHandler(this.button_refresh_Click);
+            // 
             // TodoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -132,6 +143,7 @@ namespace Todo_List
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1274, 623);
+            this.Controls.Add(this.button_refresh);
             this.Controls.Add(this.listBox_done);
             this.Controls.Add(this.listBox_doing);
             this.Controls.Add(this.listBox_toDo);
@@ -161,5 +173,6 @@ namespace Todo_List
         private System.Windows.Forms.ListBox listBox_toDo;
         private System.Windows.Forms.ListBox listBox_doing;
         private System.Windows.Forms.ListBox listBox_done;
+        private System.Windows.Forms.Button button_refresh;
     }
 }
