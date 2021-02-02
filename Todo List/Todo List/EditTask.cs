@@ -23,20 +23,7 @@ namespace Todo_List
         {
             InitializeComponent();
             disableEdits();
-
-            if (mySession != null && mySession.IsOpen)
-            {
-                mySession.Close();
-            }
-            if (mySessionFactory != null && !mySessionFactory.IsClosed)
-            {
-                mySessionFactory.Close();
-            }
-            // Inicjowanie NHibernate
-            myConfiguration = new Configuration();
-            myConfiguration.Configure();
-            mySessionFactory = myConfiguration.BuildSessionFactory();
-            mySession = mySessionFactory.OpenSession();
+            InitializingHibernate();
 
              id = Convert.ToInt32(taskName.Substring(taskName.IndexOf("(id=") + "(id=".Length));
 
@@ -57,6 +44,21 @@ namespace Todo_List
 
             }
 
+        }
+        public void InitializingHibernate()
+        {
+            if (mySession != null && mySession.IsOpen)
+            {
+                mySession.Close();
+            }
+            if (mySessionFactory != null && !mySessionFactory.IsClosed)
+            {
+                mySessionFactory.Close();
+            }
+            myConfiguration = new Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory();
+            mySession = mySessionFactory.OpenSession();
         }
         public void enableEdits()
         {
@@ -107,18 +109,7 @@ namespace Todo_List
         }
         private void button_updateChanges_Click(object sender, EventArgs e)
         {
-            if (mySession != null && mySession.IsOpen)
-            {
-                mySession.Close();
-            }
-            if (mySessionFactory != null && !mySessionFactory.IsClosed)
-            {
-                mySessionFactory.Close();
-            }
-            myConfiguration = new Configuration();
-            myConfiguration.Configure();
-            mySessionFactory = myConfiguration.BuildSessionFactory();
-            mySession = mySessionFactory.OpenSession();
+            InitializingHibernate();
 
             using (mySession.BeginTransaction())
             {

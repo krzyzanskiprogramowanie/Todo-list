@@ -46,7 +46,6 @@ namespace Todo_List
             updateDatabaseStatus("ToDo");
             listBox_doing.Items.Remove(e.Data.GetData(DataFormats.Text));
             listBox_done.Items.Remove(e.Data.GetData(DataFormats.Text));
-
         }
 
         private void listBox1_DragEnter(object sender, DragEventArgs e)
@@ -61,7 +60,6 @@ namespace Todo_List
         private void listBox_toDo_MouseDown(object sender, MouseEventArgs e)
         {
             mouseX = MousePosition.X;
-
             if (listBox_toDo.SelectedItem != null)
             {
                 EditTask editTask = new EditTask(listBox_toDo.SelectedItem.ToString());
@@ -78,8 +76,6 @@ namespace Todo_List
             updateDatabaseStatus("doing");
             listBox_toDo.Items.Remove(e.Data.GetData(DataFormats.Text));
             listBox_done.Items.Remove(e.Data.GetData(DataFormats.Text));
-
-
         }
         private void listBox2_DragEnter(object sender, DragEventArgs e)
         {
@@ -118,19 +114,8 @@ namespace Todo_List
             listBox_toDo.Items.Clear();
             listBox_doing.Items.Clear();
             listBox_done.Items.Clear();
-            if (mySession != null && mySession.IsOpen)
-            {
-                mySession.Close();
-            }
-            if (mySessionFactory != null && !mySessionFactory.IsClosed)
-            {
-                mySessionFactory.Close();
-            }
-            // Initializing NHibernate
-            myConfiguration = new Configuration();
-            myConfiguration.Configure();
-            mySessionFactory = myConfiguration.BuildSessionFactory();
-            mySession = mySessionFactory.OpenSession();
+
+            InitializingHibernate();
 
             //Show TaskNameFromDatabase in ListBox
             using (mySession.BeginTransaction())
@@ -178,19 +163,15 @@ namespace Todo_List
         private void listBox_done_MouseDown(object sender, MouseEventArgs e)
         {
             mouseX = MousePosition.X;
-
             if (listBox_done.SelectedItem != null)
             {
                 EditTask editTask = new EditTask(listBox_done.SelectedItem.ToString());
                 editTaskView(editTask, panel1_editTask);
                 listBox_toDo.DoDragDrop(listBox_done.SelectedItem.ToString(), DragDropEffects.Copy);
-
             }
         }
-
-        public void updateDatabaseStatus(string status)
+        public void InitializingHibernate()
         {
-
             if (mySession != null && mySession.IsOpen)
             {
                 mySession.Close();
@@ -203,7 +184,11 @@ namespace Todo_List
             myConfiguration.Configure();
             mySessionFactory = myConfiguration.BuildSessionFactory();
             mySession = mySessionFactory.OpenSession();
+        }
 
+        public void updateDatabaseStatus(string status)
+        {
+            InitializingHibernate();
             using (mySession.BeginTransaction())
             {
                 ICriteria criteria = mySession.CreateCriteria<ToDo>();
@@ -226,7 +211,6 @@ namespace Todo_List
 
                 };
                 mySession.Merge(LotoDo);
-
                 mySession.Transaction.Commit();
             }
         }

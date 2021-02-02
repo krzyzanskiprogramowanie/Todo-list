@@ -48,6 +48,11 @@ namespace Todo_List
 
                 }
             }
+            ChangeView();
+        }
+
+        public void ChangeView()
+        {
             label1.Text = "Nazwa \nZadania:";
             label2.Text = "      Data \nRozpoczęcia:";
             label3.Text = "        Data \nZakończenia:";
