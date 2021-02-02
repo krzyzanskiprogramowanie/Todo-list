@@ -16,6 +16,7 @@ namespace Todo_List
         {
             InitializeComponent();
             // panel_Content.BackgroundImageLayout = ImageLayout.Stretch;  => this autosize bacground image 
+            
         }
 
         private void button_exitApplication_Click(object sender, EventArgs e)
