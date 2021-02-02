@@ -36,13 +36,13 @@ namespace Todo_List
             this.label_toDoAllTasks = new System.Windows.Forms.Label();
             this.label_doneAllTasks = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label2_dateStartToDo = new System.Windows.Forms.Label();
+            this.label3_dateEnd_toDo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label5_dateStart_doing = new System.Windows.Forms.Label();
+            this.label6_dateEnd_doing = new System.Windows.Forms.Label();
+            this.label7_dateEnd_done = new System.Windows.Forms.Label();
+            this.label8_dateStart_done = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -105,87 +105,87 @@ namespace Todo_List
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 77);
+            this.label1.Location = new System.Drawing.Point(38, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nazwa Zadania:";
             // 
-            // label2
+            // label2_dateStartToDo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(134, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 15);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Data rozpoczęcia:";
+            this.label2_dateStartToDo.AutoSize = true;
+            this.label2_dateStartToDo.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2_dateStartToDo.Location = new System.Drawing.Point(134, 77);
+            this.label2_dateStartToDo.Name = "label2_dateStartToDo";
+            this.label2_dateStartToDo.Size = new System.Drawing.Size(99, 15);
+            this.label2_dateStartToDo.TabIndex = 7;
+            this.label2_dateStartToDo.Text = "Data rozpoczęcia:";
             // 
-            // label3
+            // label3_dateEnd_toDo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(255, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 15);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Data Zakończenia:";
+            this.label3_dateEnd_toDo.AutoSize = true;
+            this.label3_dateEnd_toDo.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3_dateEnd_toDo.Location = new System.Drawing.Point(255, 77);
+            this.label3_dateEnd_toDo.Name = "label3_dateEnd_toDo";
+            this.label3_dateEnd_toDo.Size = new System.Drawing.Size(103, 15);
+            this.label3_dateEnd_toDo.TabIndex = 8;
+            this.label3_dateEnd_toDo.Text = "Data Zakończenia:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(464, 77);
+            this.label4.Location = new System.Drawing.Point(483, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 15);
             this.label4.TabIndex = 9;
             this.label4.Text = "Nazwa Zadania:";
             // 
-            // label5
+            // label5_dateStart_doing
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(579, 77);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 15);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Data rozpoczęcia:";
+            this.label5_dateStart_doing.AutoSize = true;
+            this.label5_dateStart_doing.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5_dateStart_doing.Location = new System.Drawing.Point(579, 77);
+            this.label5_dateStart_doing.Name = "label5_dateStart_doing";
+            this.label5_dateStart_doing.Size = new System.Drawing.Size(99, 15);
+            this.label5_dateStart_doing.TabIndex = 10;
+            this.label5_dateStart_doing.Text = "Data rozpoczęcia:";
             // 
-            // label6
+            // label6_dateEnd_doing
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(707, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 15);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Data Zakończenia:";
+            this.label6_dateEnd_doing.AutoSize = true;
+            this.label6_dateEnd_doing.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6_dateEnd_doing.Location = new System.Drawing.Point(707, 77);
+            this.label6_dateEnd_doing.Name = "label6_dateEnd_doing";
+            this.label6_dateEnd_doing.Size = new System.Drawing.Size(103, 15);
+            this.label6_dateEnd_doing.TabIndex = 11;
+            this.label6_dateEnd_doing.Text = "Data Zakończenia:";
             // 
-            // label7
+            // label7_dateEnd_done
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(1159, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 15);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Data Zakończenia:";
+            this.label7_dateEnd_done.AutoSize = true;
+            this.label7_dateEnd_done.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7_dateEnd_done.Location = new System.Drawing.Point(1159, 77);
+            this.label7_dateEnd_done.Name = "label7_dateEnd_done";
+            this.label7_dateEnd_done.Size = new System.Drawing.Size(103, 15);
+            this.label7_dateEnd_done.TabIndex = 14;
+            this.label7_dateEnd_done.Text = "Data Zakończenia:";
             // 
-            // label8
+            // label8_dateStart_done
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(1039, 77);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 15);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Data rozpoczęcia:";
+            this.label8_dateStart_done.AutoSize = true;
+            this.label8_dateStart_done.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8_dateStart_done.Location = new System.Drawing.Point(1039, 77);
+            this.label8_dateStart_done.Name = "label8_dateStart_done";
+            this.label8_dateStart_done.Size = new System.Drawing.Size(99, 15);
+            this.label8_dateStart_done.TabIndex = 13;
+            this.label8_dateStart_done.Text = "Data rozpoczęcia:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(916, 77);
+            this.label9.Location = new System.Drawing.Point(943, 77);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 15);
             this.label9.TabIndex = 12;
@@ -198,14 +198,14 @@ namespace Todo_List
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1274, 623);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7_dateEnd_done);
+            this.Controls.Add(this.label8_dateStart_done);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6_dateEnd_doing);
+            this.Controls.Add(this.label5_dateStart_doing);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3_dateEnd_toDo);
+            this.Controls.Add(this.label2_dateStartToDo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_doneAllTasks);
             this.Controls.Add(this.label_toDoAllTasks);
@@ -230,13 +230,13 @@ namespace Todo_List
         private System.Windows.Forms.Label label_toDoAllTasks;
         private System.Windows.Forms.Label label_doneAllTasks;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2_dateStartToDo;
+        private System.Windows.Forms.Label label3_dateEnd_toDo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5_dateStart_doing;
+        private System.Windows.Forms.Label label6_dateEnd_doing;
+        private System.Windows.Forms.Label label7_dateEnd_done;
+        private System.Windows.Forms.Label label8_dateStart_done;
         private System.Windows.Forms.Label label9;
     }
 }

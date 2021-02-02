@@ -65,6 +65,15 @@ namespace Todo_List
 
                 }
             }
+            label1.Text = "Nazwa \nZadania:";
+            label4.Text = "Nazwa \nZadania:";
+            label9.Text = "Nazwa \nZadania:";
+            label2_dateStartToDo.Text = "Data \nRozpoczęcia:";
+            label3_dateEnd_toDo.Text = "        Data \nZakończenia:";
+            label5_dateStart_doing.Text = "Data \nRozpoczęcia:";
+            label6_dateEnd_doing.Text = "        Data \nZakończenia:";
+            label8_dateStart_done.Text = "Data \nRozpoczęcia:";
+            label7_dateEnd_done.Text = "        Data \nZakończenia:";
         }
 
   

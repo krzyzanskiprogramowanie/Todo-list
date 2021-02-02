@@ -24,7 +24,6 @@ namespace Todo_List
         public TodoList()
         {
             InitializeComponent();
-
         }
         public  void TodoList_Load(object sender, EventArgs e)
         {
@@ -50,7 +49,6 @@ namespace Todo_List
 
         }
 
-
         private void listBox1_DragEnter(object sender, DragEventArgs e)
         {
             mouseX1 = MousePosition.X;
@@ -59,7 +57,6 @@ namespace Todo_List
             else
                 e.Effect = DragDropEffects.None;
         }
-
 
         private void listBox_toDo_MouseDown(object sender, MouseEventArgs e)
         {
