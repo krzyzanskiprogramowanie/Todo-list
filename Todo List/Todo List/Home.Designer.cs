@@ -109,19 +109,21 @@ namespace Todo_List
             // button_addTasks
             // 
             this.button_addTasks.BackColor = System.Drawing.SystemColors.Control;
+            this.button_addTasks.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_addTasks.Image = ((System.Drawing.Image)(resources.GetObject("button_addTasks.Image")));
             this.button_addTasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_addTasks.Location = new System.Drawing.Point(12, 12);
             this.button_addTasks.Name = "button_addTasks";
             this.button_addTasks.Size = new System.Drawing.Size(245, 80);
             this.button_addTasks.TabIndex = 0;
-            this.button_addTasks.Text = "     Dodaj Zadanie";
+            this.button_addTasks.Text = "          Dodaj Zadanie";
             this.button_addTasks.UseVisualStyleBackColor = false;
             this.button_addTasks.Click += new System.EventHandler(this.button_addTasks_Click);
             // 
             // panel_Content
             // 
-            this.panel_Content.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel_Content.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_Content.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_Content.BackgroundImage")));
             this.panel_Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Content.Location = new System.Drawing.Point(0, 106);
             this.panel_Content.Name = "panel_Content";

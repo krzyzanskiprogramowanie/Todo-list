@@ -42,12 +42,13 @@ namespace Todo_List
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label1.Location = new System.Drawing.Point(95, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(327, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Masz na jutro nowe zadanie do wykonania!";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer_notification
             // 
@@ -63,11 +64,12 @@ namespace Todo_List
             this.pictureBox1.Size = new System.Drawing.Size(72, 73);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox_exit
             // 
             this.pictureBox_exit.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_exit.Image")));
-            this.pictureBox_exit.Location = new System.Drawing.Point(409, 31);
+            this.pictureBox_exit.Location = new System.Drawing.Point(428, 32);
             this.pictureBox_exit.Name = "pictureBox_exit";
             this.pictureBox_exit.Size = new System.Drawing.Size(46, 48);
             this.pictureBox_exit.TabIndex = 3;
@@ -77,7 +79,7 @@ namespace Todo_List
             // Alert
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(506, 101);
             this.Controls.Add(this.pictureBox_exit);
             this.Controls.Add(this.pictureBox1);

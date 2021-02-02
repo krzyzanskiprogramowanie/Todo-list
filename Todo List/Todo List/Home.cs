@@ -17,12 +17,12 @@ namespace Todo_List
         private Configuration myConfiguration;
         private NHibernate.ISessionFactory mySessionFactory;
         private ISession mySession;
-        public Home()
+        public Home()   
         {
             InitializeComponent();
-            // panel_Content.BackgroundImageLayout = ImageLayout.Stretch;  => this autosize bacground image 
             reminder();
             reminder();
+            //this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
         public void reminder()
         {
@@ -87,7 +87,6 @@ namespace Todo_List
             Reminders reminders = new Reminders();
             nav(reminders, panel_Content);
         }
-
         public void nav(Form form, Panel panel)
         {
             form.TopLevel = false;

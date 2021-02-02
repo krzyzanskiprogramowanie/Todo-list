@@ -67,6 +67,16 @@ namespace Todo_List
             operation = enmAction.close;
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void showAlert(string msg)
         {
             this.Opacity = 0.0;
