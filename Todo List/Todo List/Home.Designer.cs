@@ -42,7 +42,7 @@ namespace Todo_List
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(145)))), ((int)(((byte)(162)))));
+            this.panel1.BackColor = System.Drawing.Color.SlateGray;
             this.panel1.Controls.Add(this.button_exitApplication);
             this.panel1.Controls.Add(this.button_reminder);
             this.panel1.Controls.Add(this.button_allTasks);

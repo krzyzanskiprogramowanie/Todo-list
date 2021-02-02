@@ -49,69 +49,80 @@ namespace Todo_List
             // 
             // listView_toDo
             // 
+            this.listView_toDo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView_toDo.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView_toDo.HideSelection = false;
-            this.listView_toDo.Location = new System.Drawing.Point(12, 108);
+            this.listView_toDo.Location = new System.Drawing.Point(74, 128);
             this.listView_toDo.Name = "listView_toDo";
-            this.listView_toDo.Size = new System.Drawing.Size(346, 503);
+            this.listView_toDo.Size = new System.Drawing.Size(314, 483);
             this.listView_toDo.TabIndex = 0;
             this.listView_toDo.UseCompatibleStateImageBehavior = false;
             // 
             // listView_doing
             // 
+            this.listView_doing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView_doing.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView_doing.HideSelection = false;
-            this.listView_doing.Location = new System.Drawing.Point(464, 108);
+            this.listView_doing.Location = new System.Drawing.Point(467, 128);
             this.listView_doing.Name = "listView_doing";
-            this.listView_doing.Size = new System.Drawing.Size(346, 503);
+            this.listView_doing.Size = new System.Drawing.Size(323, 483);
             this.listView_doing.TabIndex = 1;
             this.listView_doing.UseCompatibleStateImageBehavior = false;
             // 
             // listView_done
             // 
+            this.listView_done.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView_done.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView_done.HideSelection = false;
-            this.listView_done.Location = new System.Drawing.Point(916, 108);
+            this.listView_done.Location = new System.Drawing.Point(872, 128);
             this.listView_done.Name = "listView_done";
-            this.listView_done.Size = new System.Drawing.Size(346, 503);
+            this.listView_done.Size = new System.Drawing.Size(325, 483);
             this.listView_done.TabIndex = 2;
             this.listView_done.UseCompatibleStateImageBehavior = false;
             // 
             // label1_doingAllTasks
             // 
             this.label1_doingAllTasks.AutoSize = true;
-            this.label1_doingAllTasks.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1_doingAllTasks.Location = new System.Drawing.Point(579, 22);
+            this.label1_doingAllTasks.BackColor = System.Drawing.Color.Transparent;
+            this.label1_doingAllTasks.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1_doingAllTasks.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1_doingAllTasks.Location = new System.Drawing.Point(561, 28);
             this.label1_doingAllTasks.Name = "label1_doingAllTasks";
-            this.label1_doingAllTasks.Size = new System.Drawing.Size(121, 31);
+            this.label1_doingAllTasks.Size = new System.Drawing.Size(156, 41);
             this.label1_doingAllTasks.TabIndex = 3;
             this.label1_doingAllTasks.Text = "W trakcie:";
             // 
             // label_toDoAllTasks
             // 
             this.label_toDoAllTasks.AutoSize = true;
-            this.label_toDoAllTasks.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_toDoAllTasks.Location = new System.Drawing.Point(104, 22);
+            this.label_toDoAllTasks.BackColor = System.Drawing.Color.Transparent;
+            this.label_toDoAllTasks.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_toDoAllTasks.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label_toDoAllTasks.Location = new System.Drawing.Point(135, 28);
             this.label_toDoAllTasks.Name = "label_toDoAllTasks";
-            this.label_toDoAllTasks.Size = new System.Drawing.Size(158, 31);
+            this.label_toDoAllTasks.Size = new System.Drawing.Size(204, 41);
             this.label_toDoAllTasks.TabIndex = 4;
             this.label_toDoAllTasks.Text = "Do zrobienia:";
             // 
             // label_doneAllTasks
             // 
             this.label_doneAllTasks.AutoSize = true;
-            this.label_doneAllTasks.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_doneAllTasks.Location = new System.Drawing.Point(1031, 22);
+            this.label_doneAllTasks.BackColor = System.Drawing.Color.Transparent;
+            this.label_doneAllTasks.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_doneAllTasks.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label_doneAllTasks.Location = new System.Drawing.Point(963, 28);
             this.label_doneAllTasks.Name = "label_doneAllTasks";
-            this.label_doneAllTasks.Size = new System.Drawing.Size(117, 31);
+            this.label_doneAllTasks.Size = new System.Drawing.Size(152, 41);
             this.label_doneAllTasks.TabIndex = 5;
             this.label_doneAllTasks.Text = "Zrobione:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(42, 68);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(90, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 18);
             this.label1.TabIndex = 6;
@@ -120,8 +131,10 @@ namespace Todo_List
             // label2_dateStartToDo
             // 
             this.label2_dateStartToDo.AutoSize = true;
+            this.label2_dateStartToDo.BackColor = System.Drawing.Color.Transparent;
             this.label2_dateStartToDo.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2_dateStartToDo.Location = new System.Drawing.Point(118, 68);
+            this.label2_dateStartToDo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2_dateStartToDo.Location = new System.Drawing.Point(176, 86);
             this.label2_dateStartToDo.Name = "label2_dateStartToDo";
             this.label2_dateStartToDo.Size = new System.Drawing.Size(117, 18);
             this.label2_dateStartToDo.TabIndex = 7;
@@ -130,8 +143,10 @@ namespace Todo_List
             // label3_dateEnd_toDo
             // 
             this.label3_dateEnd_toDo.AutoSize = true;
+            this.label3_dateEnd_toDo.BackColor = System.Drawing.Color.Transparent;
             this.label3_dateEnd_toDo.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3_dateEnd_toDo.Location = new System.Drawing.Point(217, 68);
+            this.label3_dateEnd_toDo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3_dateEnd_toDo.Location = new System.Drawing.Point(287, 86);
             this.label3_dateEnd_toDo.Name = "label3_dateEnd_toDo";
             this.label3_dateEnd_toDo.Size = new System.Drawing.Size(123, 18);
             this.label3_dateEnd_toDo.TabIndex = 8;
@@ -140,8 +155,10 @@ namespace Todo_List
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(487, 68);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(492, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 18);
             this.label4.TabIndex = 9;
@@ -150,8 +167,10 @@ namespace Todo_List
             // label5_dateStart_doing
             // 
             this.label5_dateStart_doing.AutoSize = true;
+            this.label5_dateStart_doing.BackColor = System.Drawing.Color.Transparent;
             this.label5_dateStart_doing.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5_dateStart_doing.Location = new System.Drawing.Point(564, 68);
+            this.label5_dateStart_doing.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5_dateStart_doing.Location = new System.Drawing.Point(577, 86);
             this.label5_dateStart_doing.Name = "label5_dateStart_doing";
             this.label5_dateStart_doing.Size = new System.Drawing.Size(117, 18);
             this.label5_dateStart_doing.TabIndex = 10;
@@ -160,8 +179,10 @@ namespace Todo_List
             // label6_dateEnd_doing
             // 
             this.label6_dateEnd_doing.AutoSize = true;
+            this.label6_dateEnd_doing.BackColor = System.Drawing.Color.Transparent;
             this.label6_dateEnd_doing.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6_dateEnd_doing.Location = new System.Drawing.Point(664, 68);
+            this.label6_dateEnd_doing.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6_dateEnd_doing.Location = new System.Drawing.Point(689, 86);
             this.label6_dateEnd_doing.Name = "label6_dateEnd_doing";
             this.label6_dateEnd_doing.Size = new System.Drawing.Size(123, 18);
             this.label6_dateEnd_doing.TabIndex = 11;
@@ -170,8 +191,10 @@ namespace Todo_List
             // label7_dateEnd_done
             // 
             this.label7_dateEnd_done.AutoSize = true;
+            this.label7_dateEnd_done.BackColor = System.Drawing.Color.Transparent;
             this.label7_dateEnd_done.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7_dateEnd_done.Location = new System.Drawing.Point(1113, 68);
+            this.label7_dateEnd_done.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7_dateEnd_done.Location = new System.Drawing.Point(1097, 86);
             this.label7_dateEnd_done.Name = "label7_dateEnd_done";
             this.label7_dateEnd_done.Size = new System.Drawing.Size(123, 18);
             this.label7_dateEnd_done.TabIndex = 14;
@@ -180,8 +203,10 @@ namespace Todo_List
             // label8_dateStart_done
             // 
             this.label8_dateStart_done.AutoSize = true;
+            this.label8_dateStart_done.BackColor = System.Drawing.Color.Transparent;
             this.label8_dateStart_done.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8_dateStart_done.Location = new System.Drawing.Point(1014, 68);
+            this.label8_dateStart_done.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8_dateStart_done.Location = new System.Drawing.Point(984, 86);
             this.label8_dateStart_done.Name = "label8_dateStart_done";
             this.label8_dateStart_done.Size = new System.Drawing.Size(117, 18);
             this.label8_dateStart_done.TabIndex = 13;
@@ -190,8 +215,10 @@ namespace Todo_List
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(937, 68);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(898, 86);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(117, 18);
             this.label9.TabIndex = 12;

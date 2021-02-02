@@ -44,6 +44,7 @@ namespace Todo_List
             // 
             // textBox1_taskName
             // 
+            this.textBox1_taskName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1_taskName.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1_taskName.Location = new System.Drawing.Point(73, 80);
             this.textBox1_taskName.Name = "textBox1_taskName";
@@ -73,6 +74,7 @@ namespace Todo_List
             // 
             // richTextBox_descriptionTask
             // 
+            this.richTextBox_descriptionTask.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox_descriptionTask.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBox_descriptionTask.Location = new System.Drawing.Point(73, 227);
             this.richTextBox_descriptionTask.Name = "richTextBox_descriptionTask";

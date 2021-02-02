@@ -56,6 +56,7 @@ namespace Todo_List
             label1.Text = "Nazwa \nZadania:";
             label2.Text = "      Data \nRozpoczęcia:";
             label3.Text = "        Data \nZakończenia:";
+            listView_reminders.
         }
     }
 }

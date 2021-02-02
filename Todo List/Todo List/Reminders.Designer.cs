@@ -41,21 +41,22 @@ namespace Todo_List
             // 
             this.label_reminders.AutoSize = true;
             this.label_reminders.BackColor = System.Drawing.Color.Transparent;
-            this.label_reminders.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_reminders.Font = new System.Drawing.Font("Palatino Linotype", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_reminders.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_reminders.Location = new System.Drawing.Point(487, 26);
+            this.label_reminders.Location = new System.Drawing.Point(494, 35);
             this.label_reminders.Name = "label_reminders";
-            this.label_reminders.Size = new System.Drawing.Size(254, 31);
+            this.label_reminders.Size = new System.Drawing.Size(373, 46);
             this.label_reminders.TabIndex = 0;
             this.label_reminders.Text = "Nadchodzące Zadania:";
             // 
             // listView_reminders
             // 
+            this.listView_reminders.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView_reminders.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView_reminders.HideSelection = false;
-            this.listView_reminders.Location = new System.Drawing.Point(402, 141);
+            this.listView_reminders.Location = new System.Drawing.Point(494, 155);
             this.listView_reminders.Name = "listView_reminders";
-            this.listView_reminders.Size = new System.Drawing.Size(367, 413);
+            this.listView_reminders.Size = new System.Drawing.Size(353, 413);
             this.listView_reminders.TabIndex = 1;
             this.listView_reminders.UseCompatibleStateImageBehavior = false;
             // 
@@ -65,7 +66,7 @@ namespace Todo_List
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(334, 79);
+            this.label1.Location = new System.Drawing.Point(506, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 21);
             this.label1.TabIndex = 2;
@@ -78,7 +79,7 @@ namespace Todo_List
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(536, 79);
+            this.label2.Location = new System.Drawing.Point(599, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 21);
             this.label2.TabIndex = 3;
@@ -90,7 +91,7 @@ namespace Todo_List
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(750, 79);
+            this.label3.Location = new System.Drawing.Point(726, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 21);
             this.label3.TabIndex = 4;
