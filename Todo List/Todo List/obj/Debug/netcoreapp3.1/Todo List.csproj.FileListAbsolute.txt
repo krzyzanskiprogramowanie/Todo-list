@@ -38,3 +38,4 @@ C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Alert.resources

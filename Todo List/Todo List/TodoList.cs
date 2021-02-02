@@ -213,8 +213,6 @@ namespace Todo_List
         {
                monthCalendar_TodoList_DateChanged(null, null);
         }
-
-
       
     }
 }

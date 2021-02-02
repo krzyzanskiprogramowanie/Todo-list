@@ -57,11 +57,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
   <data name="button_exitApplication.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        VQAAAVUB1l9HcgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANlSURBVHhe7ZvL
+        UwAAAVMBVlwD6QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANlSURBVHhe7ZvL
         q01hHIYPioFbMjAwMFQGypBcJiLkGiKGKH8CGWAgKSJnLAzEgJD/gJEMxIAYkEsMDeQS4XlP7Xo7Z1++
         b63fWnvtrKeewVnr+77f/t6z1t7rOmYsx9v4E/8OSdV+i9dxHdbGfhzmxHt5C+dgpeg/38TJd3yEs7Ay
         bmC3wk3yHFbGZ/Rih1Cb3VbUvvgFfX0vP+E4at+djkWYjevxGfrY33ERVsIf9GIz0NHmVzSMZViEBfgB

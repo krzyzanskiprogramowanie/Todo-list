@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NHibernate;
+using NHibernate.Cfg;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +14,54 @@ namespace Todo_List
 {
     public partial class Home : Form
     {
+        private Configuration myConfiguration;
+        private NHibernate.ISessionFactory mySessionFactory;
+        private ISession mySession;
         public Home()
         {
             InitializeComponent();
             // panel_Content.BackgroundImageLayout = ImageLayout.Stretch;  => this autosize bacground image 
+            reminder();
+            reminder();
+        }
+        public void reminder()
+        {
+            DateTime date = DateTime.Now;
+            DateTime date_plusOne = date.AddDays(1);
+            if (mySession != null && mySession.IsOpen)
+            {
+                mySession.Close();
+            }
+            if (mySessionFactory != null && !mySessionFactory.IsClosed)
+            {
+                mySessionFactory.Close();
+            }
+            // Initializing NHibernate
+            myConfiguration = new Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory();
+            mySession = mySessionFactory.OpenSession();
+            int i = 0;
+            //Show TaskNameFromDatabase in ListBox
+            using (mySession.BeginTransaction())
+            {
+
+                ICriteria criteria = mySession.CreateCriteria<ToDo>();
+                IList<ToDo> list = criteria.List<ToDo>().Where(a => a.Status == "ToDo" && (date
+                                                                              <= a.StartDate && date_plusOne>=a.StartDate)).ToList();
+                 i = 0;
+                foreach (var item in list)
+                {
+                    i++;
+                }
+            }
+            if (i>0)
+            {
+                Alert alert = new Alert();
+                alert.showAlert("Jutro masz nowe zadania do zrobienia !");
+            }
             
         }
-
         private void button_exitApplication_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -58,5 +101,7 @@ namespace Todo_List
             panel.Controls.Add(form);
             form.Show();
         }
+
+       
     }
 }
