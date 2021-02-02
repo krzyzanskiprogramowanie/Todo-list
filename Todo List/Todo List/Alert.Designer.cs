@@ -51,11 +51,13 @@ namespace Todo_List
             // 
             // button_exit
             // 
+            this.button_exit.FlatAppearance.BorderSize = 0;
+            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_exit.Location = new System.Drawing.Point(384, 36);
             this.button_exit.Name = "button_exit";
             this.button_exit.Size = new System.Drawing.Size(94, 29);
             this.button_exit.TabIndex = 1;
-            this.button_exit.Text = "button1";
+            this.button_exit.Text = "X";
             this.button_exit.UseVisualStyleBackColor = true;
             this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
             // 

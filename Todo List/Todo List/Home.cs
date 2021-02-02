@@ -42,10 +42,9 @@ namespace Todo_List
             mySessionFactory = myConfiguration.BuildSessionFactory();
             mySession = mySessionFactory.OpenSession();
             int i = 0;
-            //Show TaskNameFromDatabase in ListBox
+            //I'm checking if there are any new tasks tomorrow
             using (mySession.BeginTransaction())
             {
-
                 ICriteria criteria = mySession.CreateCriteria<ToDo>();
                 IList<ToDo> list = criteria.List<ToDo>().Where(a => a.Status == "ToDo" && (date
                                                                               <= a.StartDate && date_plusOne>=a.StartDate)).ToList();
@@ -60,7 +59,6 @@ namespace Todo_List
                 Alert alert = new Alert();
                 alert.showAlert("Jutro masz nowe zadania do zrobienia !");
             }
-            
         }
         private void button_exitApplication_Click(object sender, EventArgs e)
         {
