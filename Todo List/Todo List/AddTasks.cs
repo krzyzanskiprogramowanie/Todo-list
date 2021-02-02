@@ -22,6 +22,7 @@ namespace Todo_List
 
         private void button_addTask_Click(object sender, EventArgs e)
         {
+            //I don't want invisible tasks in the listBox
             if (textBox1_taskName.TextLength <1)
             {
                 label_errors_addTasks.Text = "Musisz podać tytuł zadania";

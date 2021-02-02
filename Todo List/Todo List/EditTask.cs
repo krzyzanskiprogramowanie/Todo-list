@@ -24,7 +24,7 @@ namespace Todo_List
             InitializeComponent();
             disableEdits();
             InitializingHibernate();
-
+          //  I am receiving hidden id from listBox
              id = Convert.ToInt32(taskName.Substring(taskName.IndexOf("(id=") + "(id=".Length));
 
             //Show TaskNameFromDatabase in editPanel
@@ -62,6 +62,7 @@ namespace Todo_List
         }
         public void enableEdits()
         {
+            //Protection against data deletion and subsequent modification
             if (richTextBox_editTaskName.TextLength < 1)
             {
                 richTextBox_editTaskName.Enabled = false;
@@ -96,9 +97,10 @@ namespace Todo_List
             enableEdits();
         }
 
+        //delete from database
         private void button_deleteTask_Click(object sender, EventArgs e)
         {
-            
+           
                 using (ISession session = mySessionFactory.OpenSession())
                 {
                     SqlConnection con = session.Connection as SqlConnection;
@@ -129,6 +131,8 @@ namespace Todo_List
             }
         }
 
+
+        //Protection against invalid data
         private void monthCalendar_startTask_DateChanged(object sender, DateRangeEventArgs e)
         {
             if (monthCalendar_startTask.SelectionRange.Start > monthCalendar_endTask.SelectionRange.Start)
