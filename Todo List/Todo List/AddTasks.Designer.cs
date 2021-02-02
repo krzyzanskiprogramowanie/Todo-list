@@ -39,6 +39,7 @@ namespace Todo_List
             this.monthCalendar_startTaskDay = new System.Windows.Forms.MonthCalendar();
             this.monthCalendar_endTaskDay = new System.Windows.Forms.MonthCalendar();
             this.button_addTask = new System.Windows.Forms.Button();
+            this.label_errors_addTasks = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1_taskName
@@ -47,6 +48,7 @@ namespace Todo_List
             this.textBox1_taskName.Name = "textBox1_taskName";
             this.textBox1_taskName.Size = new System.Drawing.Size(397, 27);
             this.textBox1_taskName.TabIndex = 0;
+            this.textBox1_taskName.TextChanged += new System.EventHandler(this.textBox1_taskName_TextChanged);
             // 
             // label_taskName
             // 
@@ -99,6 +101,7 @@ namespace Todo_List
             this.monthCalendar_startTaskDay.Name = "monthCalendar_startTaskDay";
             this.monthCalendar_startTaskDay.TabIndex = 6;
             this.monthCalendar_startTaskDay.TitleBackColor = System.Drawing.Color.DimGray;
+            this.monthCalendar_startTaskDay.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_startTaskDay_DateChanged);
             // 
             // monthCalendar_endTaskDay
             // 
@@ -107,6 +110,7 @@ namespace Todo_List
             this.monthCalendar_endTaskDay.Name = "monthCalendar_endTaskDay";
             this.monthCalendar_endTaskDay.TabIndex = 7;
             this.monthCalendar_endTaskDay.TitleBackColor = System.Drawing.Color.DimGray;
+            this.monthCalendar_endTaskDay.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_endTaskDay_DateChanged);
             // 
             // button_addTask
             // 
@@ -120,12 +124,22 @@ namespace Todo_List
             this.button_addTask.UseVisualStyleBackColor = true;
             this.button_addTask.Click += new System.EventHandler(this.button_addTask_Click);
             // 
+            // label_errors_addTasks
+            // 
+            this.label_errors_addTasks.AutoSize = true;
+            this.label_errors_addTasks.ForeColor = System.Drawing.Color.Red;
+            this.label_errors_addTasks.Location = new System.Drawing.Point(542, 470);
+            this.label_errors_addTasks.Name = "label_errors_addTasks";
+            this.label_errors_addTasks.Size = new System.Drawing.Size(0, 20);
+            this.label_errors_addTasks.TabIndex = 9;
+            // 
             // AddTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1274, 623);
+            this.Controls.Add(this.label_errors_addTasks);
             this.Controls.Add(this.button_addTask);
             this.Controls.Add(this.monthCalendar_endTaskDay);
             this.Controls.Add(this.monthCalendar_startTaskDay);
@@ -154,5 +168,6 @@ namespace Todo_List
         private System.Windows.Forms.MonthCalendar monthCalendar_startTaskDay;
         private System.Windows.Forms.MonthCalendar monthCalendar_endTaskDay;
         private System.Windows.Forms.Button button_addTask;
+        private System.Windows.Forms.Label label_errors_addTasks;
     }
 }

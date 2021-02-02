@@ -30,7 +30,7 @@ namespace Todo_List
             {
                 mySessionFactory.Close();
             }
-            // Inicjowanie NHibernate
+            // Initializing NHibernate
             myConfiguration = new Configuration();
             myConfiguration.Configure();
             mySessionFactory = myConfiguration.BuildSessionFactory();
@@ -49,6 +49,49 @@ namespace Todo_List
                 mySession.Save(LotoDo);
                 
                 mySession.Transaction.Commit();
+            }
+        }
+
+        //Protection against invalid data
+        private void textBox1_taskName_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1_taskName.TextLength > 30)
+            {
+                label_errors_addTasks.Text = "Nazwa Zadania powinna mieć mniej niż 30 znaków";
+                button_addTask.Enabled = false;
+            }
+            else
+            {
+                label_errors_addTasks.Text = "";
+                button_addTask.Enabled = true;
+            }
+        }
+
+        private void monthCalendar_startTaskDay_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            if (monthCalendar_startTaskDay.SelectionRange.Start>monthCalendar_endTaskDay.SelectionRange.Start)
+            {
+                label_errors_addTasks.Text = "Data rozpoczęcia zadania nie może być większa niż data zakończenia !";
+                button_addTask.Enabled = false;
+            }
+            else
+            {
+                label_errors_addTasks.Text = "";
+                button_addTask.Enabled = true;
+            }
+        }
+
+        private void monthCalendar_endTaskDay_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            if (monthCalendar_startTaskDay.SelectionRange.Start > monthCalendar_endTaskDay.SelectionRange.Start)
+            {
+                label_errors_addTasks.Text = "Data rozpoczęcia zadania nie może być większa niż data zakończenia !";
+                button_addTask.Enabled = false;
+            }
+            else
+            {
+                label_errors_addTasks.Text = "";
+                button_addTask.Enabled = true;
             }
         }
     }

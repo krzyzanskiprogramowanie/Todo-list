@@ -57,11 +57,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
   <data name="button_addTask.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5AAAAOQBXaJ52AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALESURBVFhH5dZL
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALESURBVFhH5dZL
         qA9RAMfxv1fklUeeRRaS98YjhRULJSyQFSKspAgLeZdHscBCoWyQKCxI6ZJHRCRkgZASIm/yvF7f79w5
         mf7/uf9/987cu+BXn+495z9zzsycM2dO4X9Oy1ijZiCW4BS+4D4aNB0wFbvxGL+L3EGuaYoRWImLqEbo
         7AeuYC12xHXbkDldMB278AyhQ73AYSxAd4Qcgr9PiEr1SHOswQ38QujwK05jGYYiLc3wGs6B1lbUJwMQ

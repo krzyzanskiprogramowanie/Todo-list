@@ -28,41 +28,7 @@ namespace Todo_List
         }
         public void TodoList_Load(object sender, EventArgs e)
         {
-            if (mySession != null && mySession.IsOpen)
-            {
-                mySession.Close();
-            }
-            if (mySessionFactory != null && !mySessionFactory.IsClosed)
-            {
-                mySessionFactory.Close();
-            }
-            // Initializing NHibernate
-            myConfiguration = new Configuration();
-            myConfiguration.Configure();
-            mySessionFactory = myConfiguration.BuildSessionFactory();
-            mySession = mySessionFactory.OpenSession();
-            
-            //Show TaskNameFromDatabase in ListBox
-            using (mySession.BeginTransaction())
-            {
-                
-                ICriteria criteria = mySession.CreateCriteria<ToDo>();
-                IList<ToDo> list = criteria.List<ToDo>().Where(a => a.Status == "ToDo").ToList();
-                foreach (var item in list)
-                {
-                    listBox_toDo.Items.Add(item.TaskName +"                                                                      (id="+ item.Id);
-                }
-                 list = criteria.List<ToDo>().Where(a => a.Status == "doing").ToList();
-                foreach (var item in list)
-                {
-                    listBox_doing.Items.Add(item.TaskName + "                                                                      (id=" + item.Id);
-                }
-                list = criteria.List<ToDo>().Where(a => a.Status == "done").ToList();
-                foreach (var item in list)
-                {
-                    listBox_done.Items.Add(item.TaskName + "                                                                      (id=" + item.Id);
-                }
-            }
+            monthCalendar_TodoList_DateChanged(null,null);
         }
         public void editTaskView(Form form, Panel panel)
         {
@@ -70,11 +36,6 @@ namespace Todo_List
             panel.Controls.Clear();
             panel.Controls.Add(form);
             form.Show();
-        }
-
-        public void reset()
-        {
-            this.Close();
         }
 
         //to do
@@ -90,49 +51,6 @@ namespace Todo_List
         }
 
 
-        public void updateDatabaseStatus(string status)
-        {
-
-            if (mySession != null && mySession.IsOpen)
-            {
-                mySession.Close();
-            }
-            if (mySessionFactory != null && !mySessionFactory.IsClosed)
-            {
-                mySessionFactory.Close();
-            }
-            // Inicjowanie NHibernate
-            myConfiguration = new Configuration();
-            myConfiguration.Configure();
-            mySessionFactory = myConfiguration.BuildSessionFactory();
-            mySession = mySessionFactory.OpenSession();
-
-            using (mySession.BeginTransaction())
-            {
-                ICriteria criteria = mySession.CreateCriteria<ToDo>();
-                IList<ToDo> list = criteria.List<ToDo>().Where(a => a.Id == id).ToList();
-                foreach (var item in list)
-                {
-                    taskName = item.TaskName.ToString();
-                    taskDescription = item.TaskDescription.ToString();
-                    startDate = item.StartDate;
-                    endDate = item.EndDate;
-                }
-                ToDo LotoDo = new ToDo
-                {
-                    TaskName = taskName,
-                    TaskDescription = taskDescription,
-                    EndDate = endDate,
-                    StartDate = DateTime.Now,
-                    Id = id,
-                    Status = status
-
-                };
-                mySession.Merge(LotoDo);
-
-                mySession.Transaction.Commit();
-            }
-        }
         private void listBox1_DragEnter(object sender, DragEventArgs e)
         {
             mouseX1 = MousePosition.X;
@@ -201,6 +119,54 @@ namespace Todo_List
 
         }
 
+        private void monthCalendar_TodoList_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            listBox_toDo.Items.Clear();
+            listBox_doing.Items.Clear();
+            listBox_done.Items.Clear();
+            if (mySession != null && mySession.IsOpen)
+            {
+                mySession.Close();
+            }
+            if (mySessionFactory != null && !mySessionFactory.IsClosed)
+            {
+                mySessionFactory.Close();
+            }
+            // Initializing NHibernate
+            myConfiguration = new Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory();
+            mySession = mySessionFactory.OpenSession();
+
+            //Show TaskNameFromDatabase in ListBox
+            using (mySession.BeginTransaction())
+            {
+
+                ICriteria criteria = mySession.CreateCriteria<ToDo>();
+                IList<ToDo> list = criteria.List<ToDo>().Where(a => a.Status == "ToDo" && (monthCalendar_TodoList
+                                                                    .SelectionRange.Start>=a.StartDate && monthCalendar_TodoList
+                                                                    .SelectionRange.Start<=a.EndDate)).ToList();
+                foreach (var item in list)
+                {
+                    listBox_toDo.Items.Add(item.TaskName + "                                                                      (id=" + item.Id);
+                }
+                list = criteria.List<ToDo>().Where(a => a.Status == "doing" && (monthCalendar_TodoList
+                                                        .SelectionRange.Start >= a.StartDate && monthCalendar_TodoList
+                                                        .SelectionRange.Start <= a.EndDate)).ToList();
+                foreach (var item in list)
+                {
+                    listBox_doing.Items.Add(item.TaskName + "                                                                      (id=" + item.Id);
+                }
+                list = criteria.List<ToDo>().Where(a => a.Status == "done" && (monthCalendar_TodoList
+                                                        .SelectionRange.Start >= a.StartDate && monthCalendar_TodoList
+                                                        .SelectionRange.Start <= a.EndDate)).ToList();
+                foreach (var item in list)
+                {
+                    listBox_done.Items.Add(item.TaskName + "                                                                      (id=" + item.Id);
+                }
+            }
+        }
+
         private void listBox_done_DragEnter(object sender, DragEventArgs e)
         {
             mouseX1 = MousePosition.X;
@@ -220,6 +186,51 @@ namespace Todo_List
             mouseX = MousePosition.X;
             if (listBox_done.SelectedItem != null)
                 listBox_toDo.DoDragDrop(listBox_done.SelectedItem.ToString(), DragDropEffects.Copy);
+        }
+
+
+
+        public void updateDatabaseStatus(string status)
+        {
+
+            if (mySession != null && mySession.IsOpen)
+            {
+                mySession.Close();
+            }
+            if (mySessionFactory != null && !mySessionFactory.IsClosed)
+            {
+                mySessionFactory.Close();
+            }
+            myConfiguration = new Configuration();
+            myConfiguration.Configure();
+            mySessionFactory = myConfiguration.BuildSessionFactory();
+            mySession = mySessionFactory.OpenSession();
+
+            using (mySession.BeginTransaction())
+            {
+                ICriteria criteria = mySession.CreateCriteria<ToDo>();
+                IList<ToDo> list = criteria.List<ToDo>().Where(a => a.Id == id).ToList();
+                foreach (var item in list)
+                {
+                    taskName = item.TaskName.ToString();
+                    taskDescription = item.TaskDescription.ToString();
+                    startDate = item.StartDate;
+                    endDate = item.EndDate;
+                }
+                ToDo LotoDo = new ToDo
+                {
+                    TaskName = taskName,
+                    TaskDescription = taskDescription,
+                    EndDate = endDate,
+                    StartDate = DateTime.Now,
+                    Id = id,
+                    Status = status
+
+                };
+                mySession.Merge(LotoDo);
+
+                mySession.Transaction.Commit();
+            }
         }
     }
 }

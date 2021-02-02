@@ -49,6 +49,7 @@ namespace Todo_List
             this.monthCalendar_TodoList.Name = "monthCalendar_TodoList";
             this.monthCalendar_TodoList.TabIndex = 0;
             this.monthCalendar_TodoList.TitleBackColor = System.Drawing.Color.DimGray;
+            this.monthCalendar_TodoList.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_TodoList_DateChanged);
             // 
             // label_ToDo
             // 
