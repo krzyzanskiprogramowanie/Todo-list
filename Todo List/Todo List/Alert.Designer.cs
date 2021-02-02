@@ -42,10 +42,11 @@ namespace Todo_List
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label1.Location = new System.Drawing.Point(95, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 20);
+            this.label1.Size = new System.Drawing.Size(343, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Masz na jutro nowe zadanie do wykonania!";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -79,7 +80,7 @@ namespace Todo_List
             // Alert
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(506, 101);
             this.Controls.Add(this.pictureBox_exit);
             this.Controls.Add(this.pictureBox1);

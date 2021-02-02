@@ -42,7 +42,7 @@ namespace Todo_List
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(145)))), ((int)(((byte)(162)))));
             this.panel1.Controls.Add(this.button_exitApplication);
             this.panel1.Controls.Add(this.button_reminder);
             this.panel1.Controls.Add(this.button_allTasks);
@@ -57,52 +57,60 @@ namespace Todo_List
             // button_exitApplication
             // 
             this.button_exitApplication.BackColor = System.Drawing.SystemColors.Control;
+            this.button_exitApplication.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_exitApplication.Image = ((System.Drawing.Image)(resources.GetObject("button_exitApplication.Image")));
             this.button_exitApplication.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_exitApplication.Location = new System.Drawing.Point(1016, 12);
             this.button_exitApplication.Name = "button_exitApplication";
             this.button_exitApplication.Size = new System.Drawing.Size(245, 80);
             this.button_exitApplication.TabIndex = 3;
-            this.button_exitApplication.Text = "             Zamknij Aplikacje";
+            this.button_exitApplication.Text = "Zamknij Aplikacje";
+            this.button_exitApplication.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_exitApplication.UseVisualStyleBackColor = false;
             this.button_exitApplication.Click += new System.EventHandler(this.button_exitApplication_Click);
             // 
             // button_reminder
             // 
             this.button_reminder.BackColor = System.Drawing.SystemColors.Control;
+            this.button_reminder.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_reminder.Image = ((System.Drawing.Image)(resources.GetObject("button_reminder.Image")));
             this.button_reminder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_reminder.Location = new System.Drawing.Point(765, 12);
             this.button_reminder.Name = "button_reminder";
             this.button_reminder.Size = new System.Drawing.Size(245, 80);
             this.button_reminder.TabIndex = 3;
-            this.button_reminder.Text = "    Przypomnienia";
+            this.button_reminder.Text = "          Przypomnienia";
+            this.button_reminder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_reminder.UseVisualStyleBackColor = false;
             this.button_reminder.Click += new System.EventHandler(this.button_reminder_Click);
             // 
             // button_allTasks
             // 
             this.button_allTasks.BackColor = System.Drawing.SystemColors.Control;
+            this.button_allTasks.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_allTasks.Image = ((System.Drawing.Image)(resources.GetObject("button_allTasks.Image")));
             this.button_allTasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_allTasks.Location = new System.Drawing.Point(514, 12);
             this.button_allTasks.Name = "button_allTasks";
             this.button_allTasks.Size = new System.Drawing.Size(245, 80);
             this.button_allTasks.TabIndex = 2;
-            this.button_allTasks.Text = "        Wszystkie Zadania";
+            this.button_allTasks.Text = "Wszystkie Zadania";
+            this.button_allTasks.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_allTasks.UseVisualStyleBackColor = false;
             this.button_allTasks.Click += new System.EventHandler(this.button_allTasks_Click);
             // 
             // button_TodoList
             // 
             this.button_TodoList.BackColor = System.Drawing.SystemColors.Control;
+            this.button_TodoList.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_TodoList.Image = ((System.Drawing.Image)(resources.GetObject("button_TodoList.Image")));
-            this.button_TodoList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_TodoList.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button_TodoList.Location = new System.Drawing.Point(263, 12);
             this.button_TodoList.Name = "button_TodoList";
             this.button_TodoList.Size = new System.Drawing.Size(245, 80);
             this.button_TodoList.TabIndex = 1;
-            this.button_TodoList.Text = "            Rzeczy do zrobienia";
+            this.button_TodoList.Text = "  Rzeczy do zrobienia";
+            this.button_TodoList.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_TodoList.UseVisualStyleBackColor = false;
             this.button_TodoList.Click += new System.EventHandler(this.button_TodoList_Click);
             // 
@@ -117,13 +125,14 @@ namespace Todo_List
             this.button_addTasks.Size = new System.Drawing.Size(245, 80);
             this.button_addTasks.TabIndex = 0;
             this.button_addTasks.Text = "          Dodaj Zadanie";
+            this.button_addTasks.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_addTasks.UseVisualStyleBackColor = false;
             this.button_addTasks.Click += new System.EventHandler(this.button_addTasks_Click);
             // 
             // panel_Content
             // 
-            this.panel_Content.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_Content.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_Content.BackgroundImage")));
+            this.panel_Content.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Content.Location = new System.Drawing.Point(0, 106);
             this.panel_Content.Name = "panel_Content";

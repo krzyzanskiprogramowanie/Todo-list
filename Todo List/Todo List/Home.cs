@@ -59,6 +59,8 @@ namespace Todo_List
                 Alert alert = new Alert();
                 alert.showAlert("Jutro masz nowe zadania do zrobienia !");
             }
+
+            button_TodoList.Text = "Rzeczy \ndo zrobienia";
         }
         private void button_exitApplication_Click(object sender, EventArgs e)
         {

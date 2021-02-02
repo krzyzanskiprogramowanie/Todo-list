@@ -47,9 +47,10 @@ namespace Todo_List
             // label1_editTaskName
             // 
             this.label1_editTaskName.AutoSize = true;
-            this.label1_editTaskName.Location = new System.Drawing.Point(29, 9);
+            this.label1_editTaskName.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1_editTaskName.Location = new System.Drawing.Point(19, 6);
             this.label1_editTaskName.Name = "label1_editTaskName";
-            this.label1_editTaskName.Size = new System.Drawing.Size(115, 20);
+            this.label1_editTaskName.Size = new System.Drawing.Size(136, 23);
             this.label1_editTaskName.TabIndex = 0;
             this.label1_editTaskName.Text = "Nazwa Zadania:";
             // 
@@ -65,9 +66,10 @@ namespace Todo_List
             // label1_editTaskDescription
             // 
             this.label1_editTaskDescription.AutoSize = true;
-            this.label1_editTaskDescription.Location = new System.Drawing.Point(404, 9);
+            this.label1_editTaskDescription.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1_editTaskDescription.Location = new System.Drawing.Point(371, 6);
             this.label1_editTaskDescription.Name = "label1_editTaskDescription";
-            this.label1_editTaskDescription.Size = new System.Drawing.Size(100, 20);
+            this.label1_editTaskDescription.Size = new System.Drawing.Size(118, 23);
             this.label1_editTaskDescription.TabIndex = 2;
             this.label1_editTaskDescription.Text = "Opis Zadania:";
             // 
@@ -81,22 +83,25 @@ namespace Todo_List
             // 
             // monthCalendar_endTask
             // 
+            this.monthCalendar_endTask.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.monthCalendar_endTask.Location = new System.Drawing.Point(353, 225);
             this.monthCalendar_endTask.Name = "monthCalendar_endTask";
             this.monthCalendar_endTask.TabIndex = 4;
-            this.monthCalendar_endTask.TitleBackColor = System.Drawing.Color.DimGray;
+            this.monthCalendar_endTask.TitleBackColor = System.Drawing.Color.LightSteelBlue;
             this.monthCalendar_endTask.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_endTask_DateChanged);
             // 
             // monthCalendar_startTask
             // 
+            this.monthCalendar_startTask.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.monthCalendar_startTask.Location = new System.Drawing.Point(2, 225);
             this.monthCalendar_startTask.Name = "monthCalendar_startTask";
             this.monthCalendar_startTask.TabIndex = 5;
-            this.monthCalendar_startTask.TitleBackColor = System.Drawing.Color.DimGray;
+            this.monthCalendar_startTask.TitleBackColor = System.Drawing.Color.LightSteelBlue;
             this.monthCalendar_startTask.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_startTask_DateChanged);
             // 
             // button_deleteTask
             // 
+            this.button_deleteTask.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_deleteTask.Image = ((System.Drawing.Image)(resources.GetObject("button_deleteTask.Image")));
             this.button_deleteTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_deleteTask.Location = new System.Drawing.Point(694, 32);
@@ -109,6 +114,7 @@ namespace Todo_List
             // 
             // button_editTask
             // 
+            this.button_editTask.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_editTask.Image = ((System.Drawing.Image)(resources.GetObject("button_editTask.Image")));
             this.button_editTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_editTask.Location = new System.Drawing.Point(694, 98);
@@ -121,6 +127,7 @@ namespace Todo_List
             // 
             // button_updateChanges
             // 
+            this.button_updateChanges.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_updateChanges.Image = ((System.Drawing.Image)(resources.GetObject("button_updateChanges.Image")));
             this.button_updateChanges.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_updateChanges.Location = new System.Drawing.Point(694, 170);
@@ -134,18 +141,20 @@ namespace Todo_List
             // label1_dataStartTask
             // 
             this.label1_dataStartTask.AutoSize = true;
-            this.label1_dataStartTask.Location = new System.Drawing.Point(130, 196);
+            this.label1_dataStartTask.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1_dataStartTask.Location = new System.Drawing.Point(120, 196);
             this.label1_dataStartTask.Name = "label1_dataStartTask";
-            this.label1_dataStartTask.Size = new System.Drawing.Size(90, 20);
+            this.label1_dataStartTask.Size = new System.Drawing.Size(99, 23);
             this.label1_dataStartTask.TabIndex = 9;
-            this.label1_dataStartTask.Text = "Zadanie Od:";
+            this.label1_dataStartTask.Text = "Zadanie od:";
             // 
             // label1_whenEndingTask
             // 
             this.label1_whenEndingTask.AutoSize = true;
-            this.label1_whenEndingTask.Location = new System.Drawing.Point(484, 196);
+            this.label1_whenEndingTask.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1_whenEndingTask.Location = new System.Drawing.Point(474, 196);
             this.label1_whenEndingTask.Name = "label1_whenEndingTask";
-            this.label1_whenEndingTask.Size = new System.Drawing.Size(71, 20);
+            this.label1_whenEndingTask.Size = new System.Drawing.Size(83, 23);
             this.label1_whenEndingTask.TabIndex = 10;
             this.label1_whenEndingTask.Text = "Do kiedy:";
             // 
@@ -160,11 +169,11 @@ namespace Todo_List
             // 
             // EditTask
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(805, 504);
             this.Controls.Add(this.label_errorsEditTasks);
             this.Controls.Add(this.label1_whenEndingTask);
             this.Controls.Add(this.label1_dataStartTask);
@@ -177,6 +186,7 @@ namespace Todo_List
             this.Controls.Add(this.label1_editTaskDescription);
             this.Controls.Add(this.richTextBox_editTaskName);
             this.Controls.Add(this.label1_editTaskName);
+            this.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditTask";
             this.Text = "EditTask";
