@@ -45,7 +45,7 @@ namespace Todo_List
             this.label_reminders.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label_reminders.Location = new System.Drawing.Point(494, 35);
             this.label_reminders.Name = "label_reminders";
-            this.label_reminders.Size = new System.Drawing.Size(373, 46);
+            this.label_reminders.Size = new System.Drawing.Size(362, 45);
             this.label_reminders.TabIndex = 0;
             this.label_reminders.Text = "Nadchodzące Zadania:";
             // 
@@ -103,6 +103,7 @@ namespace Todo_List
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1274, 623);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

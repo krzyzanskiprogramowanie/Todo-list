@@ -117,6 +117,8 @@ namespace Todo_List
             // button_addTasks
             // 
             this.button_addTasks.BackColor = System.Drawing.SystemColors.Control;
+            this.button_addTasks.FlatAppearance.BorderSize = 0;
+            this.button_addTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_addTasks.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_addTasks.Image = ((System.Drawing.Image)(resources.GetObject("button_addTasks.Image")));
             this.button_addTasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,6 +151,7 @@ namespace Todo_List
             this.Controls.Add(this.panel1);
             this.Name = "Home";
             this.Text = "Grzegorz Krzyżański";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

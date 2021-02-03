@@ -63,6 +63,26 @@ namespace Todo_List.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _145959937_136249678332973_8253954440557562778_n {
+            get {
+                object obj = ResourceManager.GetObject("145959937_136249678332973_8253954440557562778_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _146385812_416769312741595_5339467823516833419_n {
+            get {
+                object obj = ResourceManager.GetObject("146385812_416769312741595_5339467823516833419_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap house {
             get {
                 object obj = ResourceManager.GetObject("house", resourceCulture);
@@ -76,6 +96,16 @@ namespace Todo_List.Properties {
         internal static System.Drawing.Bitmap house1 {
             get {
                 object obj = ResourceManager.GetObject("house1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toDoBack {
+            get {
+                object obj = ResourceManager.GetObject("toDoBack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

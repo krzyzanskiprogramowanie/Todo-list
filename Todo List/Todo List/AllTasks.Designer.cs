@@ -231,6 +231,7 @@ namespace Todo_List
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1274, 623);
             this.Controls.Add(this.label7_dateEnd_done);
             this.Controls.Add(this.label8_dateStart_done);

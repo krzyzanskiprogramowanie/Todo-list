@@ -38,3 +38,4 @@ C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.dll
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.pdb
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.genruntimeconfig.cache
+C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.csprojAssemblyReference.cache

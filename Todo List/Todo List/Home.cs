@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,18 @@ namespace Todo_List
         private Configuration myConfiguration;
         private NHibernate.ISessionFactory mySessionFactory;
         private ISession mySession;
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeft,
+            int nTop, 
+            int nRight,
+            int nBottom,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
+
+
         public Home()   
         {
             InitializeComponent();
@@ -95,6 +108,18 @@ namespace Todo_List
             panel.Controls.Clear();
             panel.Controls.Add(form);
             form.Show();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            button_addTasks.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button_addTasks.Width, button_addTasks.Height, 30, 30));
+            button_allTasks.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button_allTasks.Width, button_allTasks.Height, 30, 30));
+            button_exitApplication.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button_exitApplication.Width, button_exitApplication.Height, 30, 30));
+            button_reminder.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button_reminder.Width, button_reminder.Height, 30, 30));
+            button_TodoList.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button_TodoList.Width, button_TodoList.Height, 30, 30));
+
+
+
         }
     }
 }
