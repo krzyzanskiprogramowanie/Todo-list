@@ -67,7 +67,7 @@ namespace Todo_List
                     TaskName = taskName,
                     TaskDescription = taskDescription,
                     EndDate = endDate,
-                    StartDate = DateTime.Now,
+                    StartDate = startDate,
                     Id = id,
                     Status = status
 
