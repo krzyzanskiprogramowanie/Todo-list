@@ -248,6 +248,7 @@ namespace Todo_List
             this.Controls.Add(this.listView_done);
             this.Controls.Add(this.listView_doing);
             this.Controls.Add(this.listView_toDo);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AllTasks";
             this.Text = "AllTasks";

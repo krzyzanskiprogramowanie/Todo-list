@@ -39,3 +39,44 @@ C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.pdb
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.genruntimeconfig.cache
 C:\Users\Grzegorz\Desktop\UWP\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.csprojAssemblyReference.cache
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.dll
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.pdb
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.exe
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.dll.config
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.deps.json
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.runtimeconfig.json
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.runtimeconfig.dev.json
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Todo List.pdb
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\af\Todo List.resources.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\pl\Todo List.resources.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Antlr3.Runtime.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Iesi.Collections.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\NHibernate.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Remotion.Linq.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\Remotion.Linq.EagerFetching.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\Todo-list\Todo List\Todo List\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.csprojAssemblyReference.cache
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.AddTasks.resources
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Alert.resources
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.AllTasks.resources
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.EditTask.resources
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Home.resources
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Properties.Resources.resources
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Reminders.resources
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.TodoList.resources
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Home.af.resources
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo_List.Home.pl.resources
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.csproj.GenerateResource.cache
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.AssemblyInfoInputs.cache
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.AssemblyInfo.cs
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.csproj.CoreCompileInputs.cache
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\af\Todo List.resources.dll
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\pl\Todo List.resources.dll
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.csproj.CopyComplete
+G:\Todo-list\Todo List\Todo List\obj\Debug\netcoreapp3.1\Todo List.genruntimeconfig.cache

@@ -58,7 +58,7 @@ namespace Todo_List
             // 
             this.button_exitApplication.BackColor = System.Drawing.SystemColors.Control;
             this.button_exitApplication.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_exitApplication.Image = ((System.Drawing.Image)(resources.GetObject("button_exitApplication.Image")));
+           // this.button_exitApplication.Image = ((System.Drawing.Image)(resources.GetObject("button_exitApplication.Image")));
             this.button_exitApplication.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_exitApplication.Location = new System.Drawing.Point(1016, 12);
             this.button_exitApplication.Name = "button_exitApplication";
@@ -73,7 +73,7 @@ namespace Todo_List
             // 
             this.button_reminder.BackColor = System.Drawing.SystemColors.Control;
             this.button_reminder.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_reminder.Image = ((System.Drawing.Image)(resources.GetObject("button_reminder.Image")));
+          // this.button_reminder.Image = ((System.Drawing.Image)(resources.GetObject("button_reminder.Image")));
             this.button_reminder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_reminder.Location = new System.Drawing.Point(765, 12);
             this.button_reminder.Name = "button_reminder";
@@ -88,7 +88,7 @@ namespace Todo_List
             // 
             this.button_allTasks.BackColor = System.Drawing.SystemColors.Control;
             this.button_allTasks.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_allTasks.Image = ((System.Drawing.Image)(resources.GetObject("button_allTasks.Image")));
+        //    this.button_allTasks.Image = ((System.Drawing.Image)(resources.GetObject("button_allTasks.Image")));
             this.button_allTasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_allTasks.Location = new System.Drawing.Point(514, 12);
             this.button_allTasks.Name = "button_allTasks";
@@ -103,7 +103,7 @@ namespace Todo_List
             // 
             this.button_TodoList.BackColor = System.Drawing.SystemColors.Control;
             this.button_TodoList.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_TodoList.Image = ((System.Drawing.Image)(resources.GetObject("button_TodoList.Image")));
+            //this.button_TodoList.Image = ((System.Drawing.Image)(resources.GetObject("button_TodoList.Image")));
             this.button_TodoList.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button_TodoList.Location = new System.Drawing.Point(263, 12);
             this.button_TodoList.Name = "button_TodoList";
@@ -120,7 +120,7 @@ namespace Todo_List
             this.button_addTasks.FlatAppearance.BorderSize = 0;
             this.button_addTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_addTasks.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_addTasks.Image = ((System.Drawing.Image)(resources.GetObject("button_addTasks.Image")));
+          //  this.button_addTasks.Image = ((System.Drawing.Image)(resources.GetObject("button_addTasks.Image")));
             this.button_addTasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_addTasks.Location = new System.Drawing.Point(12, 12);
             this.button_addTasks.Name = "button_addTasks";
